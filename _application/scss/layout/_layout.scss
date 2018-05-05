@@ -1,0 +1,217 @@
+
+// slate colors
+$color-slate-100: #9FA7B1; // text only
+$color-slate-200: #565D67; // timeline small indent
+$color-slate-300: #4D505A; //
+$color-slate-400: #313741; //
+$color-slate-500: #282C35; //
+$color-slate-600: #1F242A; //
+$color-slate-700: #171A20; // border dark
+//$color-slate-800: #888;
+//$color-slate-900: #999;
+$color-slate-000: #171A20; // border dark
+
+$color-fluro-blue: #00B9F7;
+$color-fluro-purple: #8D3BFC;
+$color-fluro-purple-light: #965AFF;
+$color-fluro-pink: #E91E63;
+$color-fluro-green: #00E676;
+$color-fluro-orange: #FFAB00;
+
+// layout
+html {
+  height: 100%;
+  min-width: 320px;
+  background: $color-slate-700;
+}
+
+// Layout
+.layout {
+  position: relative;
+  overflow-y: hidden;
+  min-height: 100%;
+  background: $color-slate-600;
+  color: $color-slate-100;
+}
+
+
+// Titlebar
+.layout__titlebar {
+  height: 32px;
+  padding: 0 4px;
+  background: $color-slate-400;
+  box-shadow: inset 0 -1px 0 $color-slate-000;
+}
+
+.titlebar-list {
+  //padding: 2px 0;
+  li {
+    user-select: none;
+    cursor: pointer;
+    padding: 2px 12px;
+    line-height: 28px;
+    float: left;
+    font-size: 14px;
+    &:hover {
+      color: white;
+    }
+    &:active {
+      background: #00B9F7;
+      color: white;
+    }
+  }
+  li:first-child {
+    margin: 0 8px 0 0;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+
+// Toolbar
+.layout__toolbar {
+  text-align: center;
+  height: 88px;
+  background: $color-slate-500;
+  box-shadow: inset 0 -1px 0 $color-slate-000;
+}
+.toolbar-list {
+  height: 88px;
+  padding: 24px 8px;
+}
+.toolbar-list--left {
+  float: left;
+}
+.toolbar-list--right {
+  float: right;
+}
+.toolbar-list--center {
+  display: inline-block;
+}
+
+.toolbar-list__item {
+  float: left;
+  margin: 0 16px;
+  padding: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  &:before {
+    content: '';
+    display: block;
+    background: white;
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+  }
+}
+.toolbar-list__item--blue {
+  background: $color-fluro-blue;
+}
+.toolbar-list__item--pink {
+  background: $color-fluro-pink;
+}
+.toolbar-list__item--purple {
+  background: $color-fluro-purple;
+}
+
+
+
+
+// Tabs
+.layout__tabs {
+  height: 40px;
+  background: $color-slate-400;
+  box-shadow: inset 0 -1px 0 $color-slate-000;
+}
+
+.tabs-list {
+
+}
+.tabs-list__tab {
+  user-select: none;
+  cursor: pointer;
+  float: left;
+  width: 200px;
+  height: 40px;
+  color: $color-slate-100;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 8px 0;
+  text-align: center;
+  background: $color-slate-400;
+  box-shadow: inset 0 -1px 0 $color-slate-000;
+  border-right: 1px solid $color-slate-000;
+  &:hover {
+    background: $color-slate-300;
+  }
+  &:active {
+    background: $color-slate-500;
+  }
+}
+.tabs-list__tab--active {
+  box-shadow: inset 0 2px 0 0 $color-fluro-purple;
+  background: $color-slate-600;
+  &:hover,
+  &:active {
+    background: $color-slate-600;
+  }
+}
+
+
+// Stage
+.layout__stage {
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $color-slate-600;
+}
+
+.stage {
+  width: 800px;
+  height: 600px;
+  box-shadow: $shadow-200;
+  border: 1px solid $color-fluro-purple-light;
+  background: $color-fluro-purple;
+}
+
+
+// Timeline
+.layout__timeline {
+  border-top: 1px solid $color-slate-000;
+  background: $color-slate-500;
+  height: 100px;
+}
+.timeline-table {
+  display: table;
+  width: 100%;
+  height: 500px;
+}
+
+.timeline-table__layers,
+.timeline-table__controls,
+.timeline-table__timeline {
+  background: $color-slate-500;
+  height: 100%;
+  display: table-cell;
+  border-right: 1px solid $color-slate-000;
+}
+
+.timeline-table__layers {
+  width:328px;
+}
+.timeline-table__controls {
+  width:72px;
+}
+
+
+// Footer
+.layout__footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 24px;
+  background: white;
+  overflow: hidden;
+}

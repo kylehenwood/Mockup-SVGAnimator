@@ -1,0 +1,38 @@
+// subheader
+.subheader {
+  position: relative;
+  height: 40px;
+}
+
+.subheader__left{
+  float: left;
+  height: 40px;
+  padding: 4px 0;
+}
+.subheader__right {
+  float: right;
+  height: 40px;
+  padding: 4px 0;
+}
+
+
+// link
+.subheader-link {
+  cursor: pointer;
+  display: block;
+  height: 32px;
+  line-height: 24px;
+  padding: 4px 0;
+  color: rgba(white,0.7);
+  &:hover {
+    color: white;
+  }
+  &:active {
+    color: white;
+    transform: translateY(2px);
+  }
+}
+.subheader-link--active {
+  color: white;
+  transform: translateY(0);
+}
