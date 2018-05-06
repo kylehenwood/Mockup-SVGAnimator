@@ -67,6 +67,7 @@ html {
   }
 }
 
+
 // Toolbar
 .layout__toolbar {
   text-align: center;
@@ -74,26 +75,31 @@ html {
   background: $color-slate-500;
   box-shadow: inset 0 -1px 0 $color-slate-000;
 }
-.toolbar-list {
+
+.toolbar {
   height: 88px;
-  padding: 24px 8px;
+  padding: 0 8px 8px;
+  overflow: hidden;
 }
-.toolbar-list--left {
+.toolbar--left {
   float: left;
 }
-.toolbar-list--right {
+.toolbar--right {
   float: right;
 }
-.toolbar-list--center {
+.toolbar--center {
   display: inline-block;
 }
 
-.toolbar-list__item {
+.toolbar__item {
   float: left;
   margin: 0 16px;
-  padding: 12px;
-  width: 40px;
-  height: 40px;
+}
+
+.toolbar-icon {
+  padding: 10px;
+  width: 36px;
+  height: 36px;
   border-radius: 4px;
   &:before {
     content: '';
@@ -104,17 +110,26 @@ html {
     border-radius: 3px;
   }
 }
-.toolbar-list__item--blue {
-  background: $color-fluro-blue;
-}
-.toolbar-list__item--pink {
-  background: $color-fluro-pink;
-}
-.toolbar-list__item--purple {
-  background: $color-fluro-purple;
-}
+.toolbar-icon--blue {background: $color-fluro-blue;}
+.toolbar-icon--pink {background: $color-fluro-pink;}
+.toolbar-icon--purple {background: $color-fluro-purple;}
 
-
+// toolbar item
+.toolbar-item {
+  height: 80px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+.toolbar-item__icon {}
+.toolbar-item__text {
+  width: 100%;
+  font-size: 12px;
+  line-height: 24px;
+  text-align: center;
+  color: white;
+}
 
 
 // Tabs
@@ -128,8 +143,8 @@ html {
 
 }
 .tabs-list__tab {
-  user-select: none;
   cursor: pointer;
+  user-select: none;
   float: left;
   width: 200px;
   height: 40px;
@@ -159,59 +174,104 @@ html {
 
 
 // Stage
-.layout__stage {
+.layout__stage {}
+
+.stage {
   position: relative;
   height: 800px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: $color-slate-600;
-  &:before {
-    position: absolute;
-    content: '';
-    width: 24px;
-    top: 24px;
-    left: 0;
-    bottom: 0;
-    background: $color-slate-500;
-  }
-  &:after {
-    position: absolute;
-    content: '';
-    height: 24px;
-    left: 24px;
-    top: 0;
-    right: 0;
-    background: $color-slate-500;
-  }
+}
+.stage__ruler-vertical {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+.stage__ruler-horizontal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 20;
+  overflow: hidden;
+}
+.stage__ruler-corner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  box-shadow: 1px 0 0 $color-slate-200;
+  box-shadow: 0 1px 0 $color-slate-200;
 }
 
-.stage {
+
+// highlight
+.stage__ruler-highlight-vertical {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 24px;
+  overflow: hidden;
+}
+.stage__ruler-highlight-horizontal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 24px;
+  overflow: hidden;
+}
+
+.ruler-highlight-horizontal {
+  background: $color-slate-400;
+  width: 800px;
+  height: 24px;
+}
+
+.ruler-highlight-vertical {
+  background: $color-slate-400;
+  width: 24px;
+  height: 600px;
+}
+
+.stage__artwork {
+  box-shadow: $shadow-200;
+}
+
+.artwork {
   width: 800px;
   height: 600px;
-  box-shadow: $shadow-200;
   border: 1px solid $color-fluro-purple-light;
   background: $color-fluro-purple;
 }
 
-.stage-ruler {
-  position: absolute;
+
+// ruler
+.ruler {
   overflow: hidden;
   z-index: 11;
   white-space: nowrap;
 }
-.stage-ruler--horizontal {
-  top: 0;
-  right: 0;
-  left: 24px;
+.ruler--horizontal {
   height: 24px;
+  padding-left: 24px;
 }
-.stage-ruler--vertical {
-  top: 24px;
-  left: 0;
-  bottom: 0;
+.ruler--vertical {
   width: 24px;
+  padding-top: 24px;
 }
+
 
 // horizontal segment
 .rule-horizontal {
@@ -220,7 +280,7 @@ html {
   height: 24px;
   width: 120px;
   position: relative;
-  border-left: 1px solid $color-slate-200;
+  box-shadow: inset 1px 0 0 $color-slate-200;
 }
 .rule-horizontal__text {
   width: 120px;
@@ -248,11 +308,11 @@ html {
 
 // vertical segment
 .rule-vertical {
+  position: relative;
   display: block;
   height: 120px;
   width: 24px;
-  position: relative;
-  border-bottom: 1px solid $color-slate-200;
+  box-shadow: inset 0 1px 0 $color-slate-200;
 }
 .rule-vertical__text {
   position: absolute;

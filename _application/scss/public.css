@@ -842,27 +842,30 @@ html {
   background: #282C35;
   box-shadow: inset 0 -1px 0 #171A20; }
 
-.toolbar-list {
+.toolbar {
   height: 88px;
-  padding: 24px 8px; }
+  padding: 0 8px 8px;
+  overflow: hidden; }
 
-.toolbar-list--left {
+.toolbar--left {
   float: left; }
 
-.toolbar-list--right {
+.toolbar--right {
   float: right; }
 
-.toolbar-list--center {
+.toolbar--center {
   display: inline-block; }
 
-.toolbar-list__item {
+.toolbar__item {
   float: left;
-  margin: 0 16px;
-  padding: 12px;
-  width: 40px;
-  height: 40px;
+  margin: 0 16px; }
+
+.toolbar-icon {
+  padding: 10px;
+  width: 36px;
+  height: 36px;
   border-radius: 4px; }
-  .toolbar-list__item:before {
+  .toolbar-icon:before {
     content: '';
     display: block;
     background: white;
@@ -870,14 +873,28 @@ html {
     height: 16px;
     border-radius: 3px; }
 
-.toolbar-list__item--blue {
+.toolbar-icon--blue {
   background: #00B9F7; }
 
-.toolbar-list__item--pink {
+.toolbar-icon--pink {
   background: #E91E63; }
 
-.toolbar-list__item--purple {
+.toolbar-icon--purple {
   background: #8D3BFC; }
+
+.toolbar-item {
+  height: 80px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column; }
+
+.toolbar-item__text {
+  width: 100%;
+  font-size: 12px;
+  line-height: 24px;
+  text-align: center;
+  color: white; }
 
 .layout__tabs {
   height: 40px;
@@ -885,8 +902,8 @@ html {
   box-shadow: inset 0 -1px 0 #171A20; }
 
 .tabs-list__tab {
-  user-select: none;
   cursor: pointer;
+  user-select: none;
   float: left;
   width: 200px;
   height: 40px;
@@ -909,54 +926,90 @@ html {
   .tabs-list__tab--active:hover, .tabs-list__tab--active:active {
     background: #1F242A; }
 
-.layout__stage {
+.stage {
   position: relative;
   height: 800px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #1F242A; }
-  .layout__stage:before {
-    position: absolute;
-    content: '';
-    width: 24px;
-    top: 24px;
-    left: 0;
-    bottom: 0;
-    background: #282C35; }
-  .layout__stage:after {
-    position: absolute;
-    content: '';
-    height: 24px;
-    left: 24px;
-    top: 0;
-    right: 0;
-    background: #282C35; }
 
-.stage {
+.stage__ruler-vertical {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden; }
+
+.stage__ruler-horizontal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 20;
+  overflow: hidden; }
+
+.stage__ruler-corner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  box-shadow: 1px 0 0 #565D67;
+  box-shadow: 0 1px 0 #565D67; }
+
+.stage__ruler-highlight-vertical {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 24px;
+  overflow: hidden; }
+
+.stage__ruler-highlight-horizontal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 24px;
+  overflow: hidden; }
+
+.ruler-highlight-horizontal {
+  background: #313741;
+  width: 800px;
+  height: 24px; }
+
+.ruler-highlight-vertical {
+  background: #313741;
+  width: 24px;
+  height: 600px; }
+
+.stage__artwork {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+
+.artwork {
   width: 800px;
   height: 600px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   border: 1px solid #965AFF;
   background: #8D3BFC; }
 
-.stage-ruler {
-  position: absolute;
+.ruler {
   overflow: hidden;
   z-index: 11;
   white-space: nowrap; }
 
-.stage-ruler--horizontal {
-  top: 0;
-  right: 0;
-  left: 24px;
-  height: 24px; }
+.ruler--horizontal {
+  height: 24px;
+  padding-left: 24px; }
 
-.stage-ruler--vertical {
-  top: 24px;
-  left: 0;
-  bottom: 0;
-  width: 24px; }
+.ruler--vertical {
+  width: 24px;
+  padding-top: 24px; }
 
 .rule-horizontal {
   display: block;
@@ -964,7 +1017,7 @@ html {
   height: 24px;
   width: 120px;
   position: relative;
-  border-left: 1px solid #565D67; }
+  box-shadow: inset 1px 0 0 #565D67; }
 
 .rule-horizontal__text {
   width: 120px;
@@ -1008,11 +1061,11 @@ html {
   left: 90%; }
 
 .rule-vertical {
+  position: relative;
   display: block;
   height: 120px;
   width: 24px;
-  position: relative;
-  border-bottom: 1px solid #565D67; }
+  box-shadow: inset 0 1px 0 #565D67; }
 
 .rule-vertical__text {
   position: absolute;
