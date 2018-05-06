@@ -160,11 +160,30 @@ html {
 
 // Stage
 .layout__stage {
+  position: relative;
   height: 800px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: $color-slate-600;
+  &:before {
+    position: absolute;
+    content: '';
+    width: 24px;
+    top: 24px;
+    left: 0;
+    bottom: 0;
+    background: $color-slate-500;
+  }
+  &:after {
+    position: absolute;
+    content: '';
+    height: 24px;
+    left: 24px;
+    top: 0;
+    right: 0;
+    background: $color-slate-500;
+  }
 }
 
 .stage {
@@ -174,6 +193,105 @@ html {
   border: 1px solid $color-fluro-purple-light;
   background: $color-fluro-purple;
 }
+
+.stage-ruler {
+  position: absolute;
+  overflow: hidden;
+  z-index: 11;
+  white-space: nowrap;
+}
+.stage-ruler--horizontal {
+  top: 0;
+  right: 0;
+  left: 24px;
+  height: 24px;
+}
+.stage-ruler--vertical {
+  top: 24px;
+  left: 0;
+  bottom: 0;
+  width: 24px;
+}
+
+// horizontal segment
+.rule-horizontal {
+  display: block;
+  float: left;
+  height: 24px;
+  width: 120px;
+  position: relative;
+  border-left: 1px solid $color-slate-200;
+}
+.rule-horizontal__text {
+  width: 120px;
+  height: 24px;
+  line-height: 16px;
+  font-size: 10px;
+  padding-left: 8px;
+}
+.rule-horizontal__hatch {
+  position: absolute;
+  bottom: 0;
+  width: 1px;
+  height: 8px;
+  background: $color-slate-300;
+}
+.rule-horizontal__hatch--1 {left:10%;}
+.rule-horizontal__hatch--2 {left:20%;}
+.rule-horizontal__hatch--3 {left:30%;}
+.rule-horizontal__hatch--4 {left:40%;}
+.rule-horizontal__hatch--5 {left:50%;}
+.rule-horizontal__hatch--6 {left:60%;}
+.rule-horizontal__hatch--7 {left:70%;}
+.rule-horizontal__hatch--8 {left:80%;}
+.rule-horizontal__hatch--9 {left:90%;}
+
+// vertical segment
+.rule-vertical {
+  display: block;
+  height: 120px;
+  width: 24px;
+  position: relative;
+  border-bottom: 1px solid $color-slate-200;
+}
+.rule-vertical__text {
+  position: absolute;
+  bottom: -24px;
+  left: 0;
+  width: 120px;
+  height: 24px;
+  line-height: 16px;
+  font-size: 10px;
+  padding-left: 8px;
+  transform: rotate(-90deg);
+  transform-origin: 0 0;
+}
+.rule-vertical__hatch {
+  position: absolute;
+  right: 0;
+  width: 8px;
+  height: 1px;
+  background: $color-slate-300;
+}
+.rule-vertical__hatch--1 {top:10%;}
+.rule-vertical__hatch--2 {top:20%;}
+.rule-vertical__hatch--3 {top:30%;}
+.rule-vertical__hatch--4 {top:40%;}
+.rule-vertical__hatch--5 {top:50%;}
+.rule-vertical__hatch--6 {top:60%;}
+.rule-vertical__hatch--7 {top:70%;}
+.rule-vertical__hatch--8 {top:80%;}
+.rule-vertical__hatch--9 {top:90%;}
+
+
+
+
+
+
+
+
+
+
 
 
 // Timeline
