@@ -35,6 +35,11 @@ html {
 
 // _layout
 @import "layout/_layout";
+@import "layout/_layout-title";
+@import "layout/_layout-toolbar";
+@import "layout/_layout-tabs";
+@import "layout/_layout-stage";
+@import "layout/_layout-timeline";
 
 // _common
 // common components used repetitively across many pages.
