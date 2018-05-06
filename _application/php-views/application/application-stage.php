@@ -1,56 +1,3 @@
-<!-- application -->
-<div class="layout__titlebar">
-	<ul class="titlebar-list">
-		<li>VAnimator</li>
-		<li>File</li>
-		<li>Prefrences</li>
-		<li>Undo</li>
-		<li>Save</li>
-		<li>Export</li>
-	</ul>
-</div>
-
-
-<!-- toolbar -->
-<div class="layout__toolbar">
-	<ul class="toolbar toolbar--left">
-		<?php
-			$iconcolor = 'toolbar-icon--blue';
-			include '_toolbar-icon.php';
-			include '_toolbar-icon.php';
-			include '_toolbar-icon.php';
-			include '_toolbar-icon.php';
-			include '_toolbar-icon.php';
-		?>
-	</ul>
-	<ul class="toolbar toolbar--center">
-		<?php
-			$iconcolor = 'toolbar-icon--pink';
-			include '_toolbar-icon.php';
-			include '_toolbar-icon.php';
-			include '_toolbar-icon.php';
-		?>
-	</ul>
-	<ul class="toolbar toolbar--right">
-		<?php
-			$iconcolor = 'toolbar-icon--purple';
-			include '_toolbar-icon.php';
-			include '_toolbar-icon.php';
-			include '_toolbar-icon.php';
-		?>
-	</ul>
-</div>
-
-
-<!-- tabs -->
-<div class="layout__tabs">
-	<ul class="tabs-list">
-		<li class="tabs-list__tab tabs-list__tab--active">Animator</li>
-		<li class="tabs-list__tab">Code</li>
-		<li class="tabs-list__tab">Designer</li>
-	</ul>
-</div>
-
 <!-- stage -->
 <div class="layout__stage">
 	<div class="stage">
@@ -99,15 +46,5 @@
 		<div class="stage__artwork">
 			<div class="artwork"></div>
 		</div>
-	</div>
-</div>
-
-
-<!-- timeline -->
-<div class="layout__timeline">
-	<div class="timeline-table">
-		<div class="timeline-table__layers"></div>
-		<div class="timeline-table__controls"></div>
-		<div class="timeline-table__timeline"></div>
 	</div>
 </div>
