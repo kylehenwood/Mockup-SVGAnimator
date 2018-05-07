@@ -9,8 +9,9 @@
 	<script type="text/javascript" src="js/vendor/modernizr-2.6.2.min.js"></script>
 	<!--<script type="text/javascript" src="js/public.js"></script>-->
 
-	<script type="text/javascript" src="js/mobile-navigation.js"></script>
-	<script type="text/javascript" src="js/pjax-nav-switcher.js"></script>
+	<script type="text/javascript" src="js/base-functions.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<!--<script type="text/javascript" src="js/pjax-nav-switcher.js"></script>-->
 	<!-- <script type="text/javascript" src="js/vendor/pjax-standalone.js"></script> -->
 	<script type="text/javascript" src="js/vendor/jquery.pjax.js"></script>
 	<script type="text/javascript" src="js/pjax-connect.js"></script>

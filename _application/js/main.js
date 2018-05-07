@@ -1,37 +1,52 @@
 // javascripts
 $(document).ready(function(){
-  mobileNavigation();
-  howItWorks();
+  alignRulers();
+
 });
 
+// rulers
+function alignRulers(){
+  var stage = $('.js-stage');
+  var stageArtwork = $('.js-stage-artwork');
+  var stageArtworkX;
+  var stageArtworkY;
+  var rulerHorizontal = $('.js-ruler-horizontal');
+  var rulerHorizontalZero = $('.js-ruler-horizontal-zero');
+  var rulerVertical = $('.js-ruler-vertical');
+  var rulerVerticalZero = $('.js-ruler-vertical-zero');
 
-function howItWorks() {
+  var movedVertical = 0;
+  var movedHorizontal = 0;
 
-  var shareTrigger = $('js-share-animation');
-  var shareAnimating = false;
-
-  shareTrigger.mouseenter(function(){
-    if (shareAnimating === false) {
-      shareTrigger.addClass('svg-share--animate');
-      shareAnimating = true;
-      setTimeout(function(){
-          shareTrigger.removeClass('svg-share--animate');
-      },5000);
-    }
-    return false;
+  // on resize run this also
+  $(window).resize(function(){
+    waitForFinalEvent(function(){
+      resizeRulers();
+    },80);
   });
 
-}
+  function resizeRulers() {
+    // get distance of artboard from left / top;
+    stageArtworkY = stageArtwork.offset().top - stage.offset().top;
+    stageArtworkX = stageArtwork.offset().left - stage.offset().left;
 
+    // horizontal
+    var horizontalOffset = rulerHorizontalZero.offset().left - stage.offset().left - movedHorizontal;
+    var horizontalMove = stageArtworkX-horizontalOffset;
+    movedHorizontal = horizontalMove;
 
-// mobile navigation
-function mobileNavigation() {
-  var trigger = $('.js-mobile-button');
-  var navigation = $('.js-mobile-navigation');
-  var header = $('.js-mobile-header');
+    rulerHorizontal.attr(
+      'style','transform:translateX('+horizontalMove+'px)'
+    );
 
-  trigger.click(function(){
-    header.toggleClass('header-mobile--open');
-    navigation.toggleClass('header-mobile__navigation--visible');
-  });
+    // vertical
+    var verticalOffset = rulerVerticalZero.offset().top - stage.offset().top - movedVertical;
+    var verticalMove = stageArtworkY-verticalOffset-rulerVerticalZero.outerHeight();
+    movedVertical = verticalMove;
+
+    rulerVertical.attr(
+      'style','transform:translateY('+verticalMove+'px)'
+    );
+  };
+  resizeRulers();
 }

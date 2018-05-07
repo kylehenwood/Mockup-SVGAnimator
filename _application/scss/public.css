@@ -972,8 +972,8 @@ html {
   left: 0;
   width: 24px;
   height: 24px;
-  box-shadow: 1px 0 0 #565D67;
-  box-shadow: 0 1px 0 #565D67; }
+  background: #1F242A;
+  box-shadow: 1px 0 0 #565D67, inset 0 -1px 0 #565D67; }
 
 .stage__ruler-highlight-vertical {
   display: flex;
@@ -1017,11 +1017,13 @@ html {
   background: #8D3BFC; }
 
 .ruler {
+  transition: all 200ms ease-out;
   overflow: hidden;
   z-index: 11;
   white-space: nowrap; }
 
 .ruler--horizontal {
+  display: inline-flex;
   height: 24px;
   padding-left: 24px; }
 
@@ -1031,14 +1033,13 @@ html {
 
 .rule-horizontal {
   display: block;
-  float: left;
+  flex-shrink: 0;
   height: 24px;
-  width: 120px;
+  width: 100px;
   position: relative;
   box-shadow: inset 1px 0 0 #565D67; }
 
 .rule-horizontal__text {
-  width: 120px;
   height: 24px;
   line-height: 16px;
   font-size: 10px;
@@ -1081,15 +1082,14 @@ html {
 .rule-vertical {
   position: relative;
   display: block;
-  height: 120px;
+  height: 100px;
   width: 24px;
-  box-shadow: inset 0 1px 0 #565D67; }
+  box-shadow: inset 0 -1px 0 #565D67; }
 
 .rule-vertical__text {
   position: absolute;
   bottom: -24px;
   left: 0;
-  width: 120px;
   height: 24px;
   line-height: 16px;
   font-size: 10px;
