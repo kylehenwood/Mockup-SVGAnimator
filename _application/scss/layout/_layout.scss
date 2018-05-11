@@ -1,24 +1,6 @@
-
-// slate colors
-$color-slate-100: #9FA7B1; // text only
-$color-slate-200: #565D67; // timeline small indent
-$color-slate-300: #4D505A; //
-$color-slate-400: #313741; //
-$color-slate-500: #282C35; //
-$color-slate-600: #1F242A; //
-$color-slate-700: #171A20; // border dark
-//$color-slate-800: #888;
-//$color-slate-900: #999;
-$color-slate-000: #171A20; // border dark
-
-$color-fluro-blue: #00B9F7;
-$color-fluro-purple: #8D3BFC;
-$color-fluro-purple-light: #965AFF;
-$color-fluro-pink: #E91E63;
-$color-fluro-green: #00E676;
-$color-fluro-orange: #FFAB00;
-
 // layout
+$timelineHeight: 400px;
+
 html {
   height: 100%;
   min-width: 320px;
@@ -28,8 +10,9 @@ html {
 // Layout
 .layout {
   position: relative;
-  overflow-y: hidden;
-  min-height: 100%;
+  overflow: hidden;
+  height: 100%;
+  padding: 160px 0 $timelineHeight 0;
   background: $color-slate-600;
   color: $color-slate-100;
 }
@@ -37,7 +20,11 @@ html {
 
 // Titlebar
 .layout__titlebar {
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 32px;
+  width: 100%;
   padding: 0 4px;
   background: $color-slate-400;
   box-shadow: inset 0 -1px 0 $color-slate-000;
@@ -46,33 +33,47 @@ html {
 
 // Toolbar
 .layout__toolbar {
-  text-align: center;
+  position: absolute;
+  top: 32px;
+  left: 0;
   height: 88px;
+  width: 100%;
+  text-align: center;
   background: $color-slate-500;
   box-shadow: inset 0 -1px 0 $color-slate-000;
 }
 
 // Tabs
 .layout__tabs {
+  position: absolute;
+  top: 120px;
+  left: 0;
   height: 40px;
+  width: 100%;
   background: $color-slate-400;
   box-shadow: inset 0 -1px 0 $color-slate-000;
 }
 
 // Stage
-.layout__stage {}
-
-
-
-
+.layout__stage {
+  position: absolute;
+  top: 160px;
+  bottom: 400px;
+  left: 0;
+  width: 100%;
+}
 
 
 
 // Timeline
 .layout__timeline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: $timelineHeight;
   border-top: 1px solid $color-slate-000;
   background: $color-slate-500;
-  height: 100px;
 }
 
 

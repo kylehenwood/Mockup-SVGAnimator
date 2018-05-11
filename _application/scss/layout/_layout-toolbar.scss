@@ -24,15 +24,8 @@
   width: 36px;
   height: 36px;
   border-radius: 4px;
-  &:before {
-    content: '';
-    display: block;
-    background: white;
-    width: 16px;
-    height: 16px;
-    border-radius: 3px;
-  }
 }
+
 .toolbar-icon--blue {background: $color-fluro-blue;}
 .toolbar-icon--pink {background: $color-fluro-pink;}
 .toolbar-icon--purple {background: $color-fluro-purple;}

@@ -43,6 +43,33 @@
   }
 }
 
+.icon--square-white {
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 2px;
+}
+
+.icon--square-green {
+  width: 16px;
+  height: 16px;
+  background: $color-fluro-green;
+  border-radius: 2px;
+}
+
+.icon--square-blue {
+  width: 16px;
+  height: 16px;
+  background: $color-fluro-blue;
+  border-radius: 2px;
+}
+
+.icon--square-pink {
+  width: 16px;
+  height: 16px;
+  background: $color-fluro-pink;
+  border-radius: 2px;
+}
 
 
 .icon--test {
