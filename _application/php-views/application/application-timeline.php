@@ -4,6 +4,15 @@
 
 	<div class="timeline-layout">
 
+		<!-- indicator -->
+		<div class="timeline-layout__indicator">
+			<div class="timeline-indicator">
+				<div class="timeline-indicator__position">
+					<div class="indicator"></div>
+				</div>
+			</div>
+		</div>
+
 		<!-- title -->
 		<div class="timeline-layout__title">
 			<div class="timeline-table">

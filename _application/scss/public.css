@@ -1182,6 +1182,7 @@ html {
 
 .timeline-layout__title {
   position: absolute;
+  z-index: 5;
   top: 0;
   left: 0;
   height: 32px;
@@ -1191,6 +1192,48 @@ html {
 .timeline-layout__content {
   overflow-y: scroll;
   max-height: 100%; }
+
+.timeline-layout__indicator {
+  position: absolute;
+  z-index: 50;
+  height: 100%;
+  left: 400px;
+  right: 0;
+  top: 0; }
+
+.timeline-indicator {
+  position: relative;
+  height: 100%;
+  width: 100%; }
+
+.timeline-indicator__position {
+  position: absolute;
+  left: 20%;
+  width: 10px;
+  height: 100%; }
+
+.indicator {
+  position: relative;
+  width: 10px;
+  height: 100%; }
+  .indicator:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 4px;
+    height: 100%;
+    width: 1px;
+    background: #FFAB00;
+    box-shadow: 0 0 0 1px black; }
+  .indicator:after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: 2px;
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    background: #FFAB00; }
 
 .timeline-table {
   display: table;
@@ -1208,10 +1251,8 @@ html {
   border-right: 1px solid #171A20; }
 
 .timeline-table__timeline {
+  position: relative;
   border-left: 1px solid #171A20; }
-
-.timeline-table__timeline--relative {
-  position: relative; }
 
 .timeline-table__layers {
   width: 328px; }
