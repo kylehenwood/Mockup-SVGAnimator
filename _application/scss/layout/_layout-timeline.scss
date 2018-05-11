@@ -23,6 +23,7 @@
 .timeline-layout__indicator {
   position: absolute;
   z-index: 50;
+  pointer-events: none;
   height: 100%;
   left: 400px;
   right: 0;
