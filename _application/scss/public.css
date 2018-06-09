@@ -824,6 +824,173 @@ nowrap,
 .googleplus-icon:before {
   content: '\e7d9'; }
 
+@font-face {
+  font-family: 'fa-solid';
+  src: url("../fonts/fontAwesome/fa-solid-free.otf"); }
+
+.fa-icon:before {
+  font-family: 'fa-solid';
+  line-height: 1;
+  display: block;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: normal !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased; }
+
+.fa-16 {
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+  color: white; }
+
+.fa-blue {
+  color: #00B9F7; }
+
+.fa-green {
+  color: #00E676; }
+
+.fa-pink {
+  color: #E91E63; }
+
+.fa-white {
+  color: white; }
+
+.fa--ruler-combined:before {
+  content: '\f546'; }
+
+.fa--angle-left:before {
+  content: '\f104'; }
+
+.fa--angle-right:before {
+  content: '\f105'; }
+
+.fa--angle-up:before {
+  content: '\f106'; }
+
+.fa--angle-down:before {
+  content: '\f107'; }
+
+.fa--arrow-left:before {
+  content: '\f060'; }
+
+.fa--arrow-right:before {
+  content: '\f061'; }
+
+.fa--arrow-up:before {
+  content: '\f062'; }
+
+.fa--arrow-down:before {
+  content: '\f063'; }
+
+.fa--arrows-alt:before {
+  content: '\f0b2'; }
+
+.fa--chevron-left:before {
+  content: '\f053'; }
+
+.fa--chevron-right:before {
+  content: '\f054'; }
+
+.fa--chevron-up:before {
+  content: '\f077'; }
+
+.fa--chevron-down:before {
+  content: '\f078'; }
+
+.fa--caret-down:before {
+  content: '\f0d7'; }
+
+.fa--check:before {
+  content: '\f00c'; }
+
+.fa--cog:before {
+  content: '\f013'; }
+
+.fa--cogs:before {
+  content: '\f085'; }
+
+.fa--cloud-upload-alt:before {
+  content: '\f382'; }
+
+.fa--code:before {
+  content: '\f121'; }
+
+.fa--crop:before {
+  content: '\f125'; }
+
+.fa--columns:before {
+  content: '\f0db'; }
+
+.fa--ellipses-v:before {
+  content: '\f142'; }
+
+.fa--ellipses-h:before {
+  content: '\f141'; }
+
+.fa--expand:before {
+  content: '\f065'; }
+
+.fa-expand-arrows-alt:before {
+  content: '\f31e'; }
+
+.fa--infinity:before {
+  content: '\f534'; }
+
+.fa--file:before {
+  content: '\f15b'; }
+
+.fa--folder:before {
+  content: '\f07b'; }
+
+.fa--folder-open:before {
+  content: '\f07c'; }
+
+.fa--minus:before {
+  content: '\f068'; }
+
+.fa--plus:before {
+  content: '\f067'; }
+
+.fa--pause:before {
+  content: '\f04c'; }
+
+.fa--play:before {
+  content: '\f04b'; }
+
+.fa--stop:before {
+  content: '\f04d'; }
+
+.fa--redo:before {
+  content: '\f01e'; }
+
+.fa--object-group:before {
+  content: '\f247'; }
+
+.fa--object-ungroup:before {
+  content: '\f248'; }
+
+.fa--step-backward:before {
+  content: '\f048'; }
+
+.fa--stopwatch:before {
+  content: '\f2f2'; }
+
+.fa--unlock:before {
+  content: '\f09c'; }
+
+.fa--unlink:before {
+  content: '\f127'; }
+
+.fa--lock:before {
+  content: '\f023'; }
+
+.fa--lock-open:before {
+  content: '\f3c1'; }
+
+.fa--check:before {
+  content: ''; }
+
 html {
   height: 100%;
   min-width: 320px;
@@ -849,8 +1016,11 @@ html {
 
 .layout__toolbar {
   position: absolute;
-  top: 32px;
+  top: 72px;
   left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   height: 88px;
   width: 100%;
   text-align: center;
@@ -859,7 +1029,7 @@ html {
 
 .layout__tabs {
   position: absolute;
-  top: 120px;
+  top: 32px;
   left: 0;
   height: 40px;
   width: 100%;
@@ -881,6 +1051,14 @@ html {
   height: 400px;
   border-top: 1px solid #171A20;
   background: #282C35; }
+
+.layout__editor {
+  display: none;
+  position: absolute;
+  top: 160px;
+  bottom: 0;
+  z-index: 10;
+  width: 100%; }
 
 .layout__footer {
   position: absolute;
@@ -910,22 +1088,24 @@ html {
   font-weight: bold; }
 
 .toolbar {
+  display: flex;
+  flex-direction: row;
   height: 88px;
   padding: 0 8px 8px;
-  overflow: hidden; }
+  overflow: hidden;
+  width: 33.3333333333%; }
 
 .toolbar--left {
-  float: left; }
+  justify-content: flex-start; }
 
 .toolbar--right {
-  float: right; }
+  justify-content: flex-end; }
 
 .toolbar--center {
-  display: inline-block; }
+  justify-content: center; }
 
 .toolbar__item {
-  float: left;
-  margin: 0 16px; }
+  padding: 0 16px; }
 
 .toolbar-icon {
   padding: 10px;
@@ -979,11 +1159,11 @@ html {
 
 .tabs-list__tab--active {
   box-shadow: inset 0 2px 0 0 #8D3BFC;
-  background: #1F242A;
+  background: #282C35;
   color: white; }
   .tabs-list__tab--active:hover, .tabs-list__tab--active:active {
     color: white;
-    background: #1F242A; }
+    background: #282C35; }
 
 .stage {
   position: relative;
@@ -1196,6 +1376,7 @@ html {
 .timeline-layout__indicator {
   position: absolute;
   z-index: 50;
+  pointer-events: none;
   height: 100%;
   left: 400px;
   right: 0;
@@ -1455,6 +1636,18 @@ html {
     width: 8px;
     border-radius: 8px;
     background: #00B9F7; }
+
+.timeline-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.editor {
+  width: 100%;
+  height: 100%;
+  background: red; }
 
 .header {
   position: relative;

@@ -1,22 +1,18 @@
 
 .toolbar {
+  display: flex;
+  flex-direction: row;
   height: 88px;
   padding: 0 8px 8px;
   overflow: hidden;
+  width: (100%/3);
 }
-.toolbar--left {
-  float: left;
-}
-.toolbar--right {
-  float: right;
-}
-.toolbar--center {
-  display: inline-block;
-}
+.toolbar--left {justify-content: flex-start;}
+.toolbar--right {justify-content: flex-end;}
+.toolbar--center {justify-content: center;}
 
 .toolbar__item {
-  float: left;
-  margin: 0 16px;
+  padding: 0 16px;
 }
 
 .toolbar-icon {

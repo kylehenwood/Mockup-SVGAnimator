@@ -1,7 +1,5 @@
 <!-- timeline -->
 <div class="layout__timeline">
-
-
 	<div class="timeline-layout">
 
 		<!-- indicator -->
@@ -18,20 +16,20 @@
 			<div class="timeline-table">
 				<div class="timeline-table__layers">
 					<div class="artboard-control">
-						<div class="artboard-control__timing"><span class="icon icon--16 icon--square-white"><span></div>
+						<div class="artboard-control__timing"><span class="fa-icon fa-16 fa--stopwatch"><span></div>
 						<div class="artboard-control__title">Timeline (Artboard Name)</div>
-						<div class="artboard-control__settings"><span class="icon icon--16 icon--square-white"><span></div>
+						<div class="artboard-control__settings"><span class="fa-icon fa-16 fa--cog"><span></div>
 					</div>
 				</div>
 				<div class="timeline-table__controls">
 					<div class="controls-layer">
 						<!-- play || pause -->
 						<div class="controls-timeline__button">
-							<div class="icon icon--16 icon--square-white"></div>
+							<div class="fa-icon fa-16 fa--pause"></div>
 						</div>
 						<!-- loop: on || off -->
 						<div class="controls-timeline__button">
-							<div class="icon icon--16 icon--square-white"></div>
+							<div class="fa-icon fa-16 fa--infinity"></div>
 						</div>
 					</div>
 				</div>
@@ -66,10 +64,10 @@
 					<div class="layer">
 							<div class="layer__item layer__item--indent-1">
 								<div class="layer-item">
-									<div class="layer-item__expand"><span class="icon icon--16 icon--square-white"><span></div>
-									<div class="layer-item__icon"><span class="icon icon--16 icon--square-green"><span></div>
+									<div class="layer-item__expand"><span class="fa-icon fa-16 fa-white fa--angle-down"></span></div>
+									<div class="layer-item__icon"><span class="fa-icon fa-16 fa-green fa--folder-open"></span></div>
 									<div class="layer-item__title">Artwork</div>
-									<div class="layer-item__style"><span class="icon icon--16 icon--square-white"><span></div>
+									<div class="layer-item__style"><span class="fa-icon fa-16 fa-white fa--ellipses-h"></span></div>
 								</div>
 							</div>
 							<div class="layer__styles"></div>
@@ -77,9 +75,9 @@
 					<div class="layer">
 							<div class="layer__item layer__item--indent-2">
 								<div class="layer-item">
-									<div class="layer-item__icon"><span class="icon icon--16 icon--square-blue"><span></div>
+									<div class="layer-item__icon"><span class="icon icon--16 icon--square-blue"></span></div>
 									<div class="layer-item__title">charging-circle</div>
-									<div class="layer-item__style"><span class="icon icon--16 icon--square-white"><span></div>
+									<div class="layer-item__style"><span class="fa-icon fa-16 fa-white fa--ellipses-h"></span></div>
 								</div>
 							</div>
 							<div class="layer__styles"></div>
@@ -87,10 +85,10 @@
 					<div class="layer">
 							<div class="layer__item layer__item--indent-2">
 								<div class="layer-item">
-									<div class="layer-item__expand"><span class="icon icon--16 icon--square-white"><span></div>
-									<div class="layer-item__icon"><span class="icon icon--16 icon--square-green"><span></div>
+									<div class="layer-item__expand"><span class="fa-icon fa-16 fa-white fa--angle-down"></span></div>
+									<div class="layer-item__icon"><span class="fa-icon fa-16 fa-green fa--folder-open"></span></div>
 									<div class="layer-item__title">beam</div>
-									<div class="layer-item__style"><span class="icon icon--16 icon--square-white"><span></div>
+									<div class="layer-item__style"><span class="fa-icon fa-16 fa-white fa--ellipses-h"></span></div>
 								</div>
 							</div>
 							<div class="layer__styles"></div>
@@ -98,9 +96,9 @@
 					<div class="layer">
 							<div class="layer__item layer__item--indent-3">
 								<div class="layer-item">
-									<div class="layer-item__icon"><span class="icon icon--16 icon--square-blue"><span></div>
+									<div class="layer-item__icon"><span class="icon icon--16 icon--square-blue"></span></div>
 									<div class="layer-item__title">beam-blue</div>
-									<div class="layer-item__style"><span class="icon icon--16 icon--square-white"><span></div>
+									<div class="layer-item__style"><span class="fa-icon fa-16 fa-white fa--ellipses-h"></span></div>
 								</div>
 							</div>
 							<div class="layer__styles"></div>
@@ -108,9 +106,9 @@
 					<div class="layer">
 							<div class="layer__item layer__item--indent-3">
 								<div class="layer-item">
-									<div class="layer-item__icon"><span class="icon icon--16 icon--square-blue"><span></div>
+									<div class="layer-item__icon"><span class="icon icon--16 icon--square-blue"></span></div>
 									<div class="layer-item__title">beam-white</div>
-									<div class="layer-item__style"><span class="icon icon--16 icon--square-white"><span></div>
+									<div class="layer-item__style"><span class="fa-icon fa-16 fa-white fa--ellipses-h"></span></div>
 								</div>
 							</div>
 							<div class="layer__styles"></div>
@@ -118,10 +116,10 @@
 					<div class="layer">
 							<div class="layer__item layer__item--indent-2">
 								<div class="layer-item">
-									<div class="layer-item__expand"><span class="icon icon--16 icon--square-white"><span></div>
-									<div class="layer-item__icon"><span class="icon icon--16 icon--square-green"><span></div>
+									<div class="layer-item__expand"><span class="fa-icon fa-16 fa-white fa--angle-down"></span></div>
+									<div class="layer-item__icon"><span class="fa-icon fa-16 fa-green fa--folder-open"></span></div>
 									<div class="layer-item__title">raygun</div>
-									<div class="layer-item__style"><span class="icon icon--16 icon--square-white"><span></div>
+									<div class="layer-item__style"><span class="fa-icon fa-16 fa-white fa--ellipses-h"></span></div>
 								</div>
 							</div>
 							<div class="layer__styles"></div>
@@ -129,9 +127,9 @@
 					<div class="layer">
 							<div class="layer__item layer__item--indent-3">
 								<div class="layer-item">
-									<div class="layer-item__icon"><span class="icon icon--16 icon--square-blue"><span></div>
+									<div class="layer-item__icon"><span class="icon icon--16 icon--square-blue"></span></div>
 									<div class="layer-item__title">gun-tip</div>
-									<div class="layer-item__style"><span class="icon icon--16 icon--square-white"><span></div>
+									<div class="layer-item__style"><span class="fa-icon fa-16 fa-white fa--ellipses-h"></span></div>
 								</div>
 							</div>
 							<div class="layer__styles"></div>
@@ -139,9 +137,9 @@
 					<div class="layer">
 							<div class="layer__item layer__item--indent-3">
 								<div class="layer-item">
-									<div class="layer-item__icon"><span class="icon icon--16 icon--square-blue"><span></div>
+									<div class="layer-item__icon"><span class="icon icon--16 icon--square-blue"></span></div>
 									<div class="layer-item__title">fin-background</div>
-									<div class="layer-item__style"><span class="icon icon--16 icon--square-white"><span></div>
+									<div class="layer-item__style"><span class="fa-icon fa-16 fa-white fa--ellipses-h"></span></div>
 								</div>
 							</div>
 							<div class="layer__styles"></div>
@@ -149,10 +147,10 @@
 					<div class="layer">
 							<div class="layer__item layer__item--indent-3">
 								<div class="layer-item">
-									<div class="layer-item__expand"><span class="icon icon--16 icon--square-white"><span></div>
-									<div class="layer-item__icon"><span class="icon icon--16 icon--square-green"><span></div>
+									<div class="layer-item__expand"><span class="fa-icon fa-16 fa-white fa--angle-right"><span></div>
+									<div class="layer-item__icon"><span class="fa-icon fa-16 fa-green fa--folder"><span></div>
 									<div class="layer-item__title">gun-tip</div>
-									<div class="layer-item__style"><span class="icon icon--16 icon--square-white"><span></div>
+									<div class="layer-item__style"><span class="fa-icon fa-16 fa-white fa--ellipses-h"><span></div>
 								</div>
 							</div>
 							<div class="layer__styles"></div>
@@ -160,10 +158,10 @@
 					<div class="layer">
 							<div class="layer__item layer__item--indent-3">
 								<div class="layer-item">
-									<div class="layer-item__expand"><span class="icon icon--16 icon--square-white"><span></div>
-									<div class="layer-item__icon"><span class="icon icon--16 icon--square-green"><span></div>
+									<div class="layer-item__expand"><span class="fa-icon fa-16 fa-white fa--angle-right"></span></div>
+									<div class="layer-item__icon"><span class="fa-icon fa-16 fa-green fa--folder"></span></div>
 									<div class="layer-item__title">gun-background</div>
-									<div class="layer-item__style"><span class="icon icon--16 icon--square-white"><span></div>
+									<div class="layer-item__style"><span class="fa-icon fa-16 fa-white fa--ellipses-h"></span></div>
 								</div>
 							</div>
 							<div class="layer__styles"></div>
@@ -171,10 +169,10 @@
 					<div class="layer">
 							<div class="layer__item layer__item--indent-3">
 								<div class="layer-item">
-									<div class="layer-item__expand"><span class="icon icon--16 icon--square-white"><span></div>
-									<div class="layer-item__icon"><span class="icon icon--16 icon--square-green"><span></div>
+									<div class="layer-item__expand"><span class="fa-icon fa-16 fa-white fa--angle-down"></span></div>
+									<div class="layer-item__icon"><span class="fa-icon fa-16 fa-green fa--folder-open"></span></div>
 									<div class="layer-item__title">mask-shine</div>
-									<div class="layer-item__style"><span class="icon icon--16 icon--square-white"><span></div>
+									<div class="layer-item__style"><span class="fa-icon fa-16 fa-white fa--ellipses-h"></span></div>
 								</div>
 							</div>
 							<div class="layer__styles"></div>
@@ -182,10 +180,10 @@
 					<div class="layer">
 						<div class="layer__item layer__item--indent-4">
 							<div class="layer-item">
-								<div class="layer-item__expand"><span class="icon icon--16 icon--square-white"><span></div>
-								<div class="layer-item__icon"><span class="icon icon--16 icon--square-pink"><span></div>
+								<div class="layer-item__expand"><span class="fa-icon fa-16 fa-white fa--angle-down"></span></div>
+								<div class="layer-item__icon"><span class="fa-icon fa-16 fa-pink fa--folder-open"></span></div>
 								<div class="layer-item__title">clip-path</div>
-								<div class="layer-item__style"><span class="icon icon--16 icon--square-white"><span></div>
+								<div class="layer-item__style"><span class="fa-icon fa-16 fa-white fa--ellipses-h"></span></div>
 							</div>
 						</div>
 						<div class="layer__styles"></div>
@@ -193,9 +191,9 @@
 					<div class="layer">
 						<div class="layer__item layer__item--indent-5">
 							<div class="layer-item">
-								<div class="layer-item__icon"><span class="icon icon--16 icon--square-blue"><span></div>
+								<div class="layer-item__icon"><span class="icon icon--16 icon--square-blue"></span></div>
 								<div class="layer-item__title">sheen</div>
-								<div class="layer-item__style"><span class="icon icon--16 icon--square-white"><span></div>
+								<div class="layer-item__style"><span class="fa-icon fa-16 fa-white fa--ellipses-h"></span></div>
 							</div>
 						</div>
 						<div class="layer__styles"></div>
@@ -203,10 +201,10 @@
 					<div class="layer">
 						<div class="layer__item layer__item--indent-3">
 							<div class="layer-item">
-								<div class="layer-item__expand"><span class="icon icon--16 icon--square-white"><span></div>
-								<div class="layer-item__icon"><span class="icon icon--16 icon--square-green"><span></div>
+								<div class="layer-item__expand"><span class="fa-icon fa-16 fa-white fa--angle-right"></span></div>
+								<div class="layer-item__icon"><span class="fa-icon fa-16 fa-green fa--folder"></span></div>
 								<div class="layer-item__title">gun-metal</div>
-								<div class="layer-item__style"><span class="icon icon--16 icon--square-white"><span></div>
+								<div class="layer-item__style"><span class="fa-icon fa-16 fa-white fa--ellipses-h"></span></div>
 							</div>
 						</div>
 						<div class="layer__styles"></div>
@@ -214,10 +212,10 @@
 					<div class="layer">
 						<div class="layer__item layer__item--indent-3">
 							<div class="layer-item">
-								<div class="layer-item__expand"><span class="icon icon--16 icon--square-white"><span></div>
-								<div class="layer-item__icon"><span class="icon icon--16 icon--square-green"><span></div>
+								<div class="layer-item__expand"><span class="fa-icon fa-16 fa-white fa--angle-right"></span></div>
+								<div class="layer-item__icon"><span class="fa-icon fa-16 fa-green fa--folder"></span></div>
 								<div class="layer-item__title">gun-detail</div>
-								<div class="layer-item__style"><span class="icon icon--16 icon--square-white"><span></div>
+								<div class="layer-item__style"><span class="fa-icon fa-16 fa-white fa--ellipses-h"></span></div>
 							</div>
 						</div>
 						<div class="layer__styles"></div>
@@ -231,11 +229,11 @@
 					<div class="controls-layer">
 						<!-- hide -->
 						<div class="controls-timeline__button">
-							<div class="icon icon--16 icon--square-white"></div>
+							<div class="fa-icon fa-16 fa-white fa--lock"></div>
 						</div>
 						<!-- lock -->
 						<div class="controls-timeline__button">
-							<div class="icon icon--16 icon--square-white"></div>
+							<div class="fa-icon fa-16 fa-white fa--lock-open"></div>
 						</div>
 					</div>
 					<?php } ?>
@@ -243,6 +241,7 @@
 
 				<!-- layer timeline column -->
 				<div class="timeline-table__timeline">
+					<canvas class="timeline-canvas"></canvas>
 					<div class="timeline-svg"></div>
 					<?php for ($x = 0; $x <= 14; $x++) { ?>
 					<div class="timeline-layer"></div>
@@ -250,6 +249,5 @@
 				</div>
 			</div>
 		</div>
-	</div>
 	</div>
 </div>

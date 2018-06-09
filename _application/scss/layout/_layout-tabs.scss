@@ -27,11 +27,11 @@
 }
 .tabs-list__tab--active {
   box-shadow: inset 0 2px 0 0 $color-fluro-purple;
-  background: $color-slate-600;
+  background: $color-slate-500;
   color: white;
   &:hover,
   &:active {
     color: white;
-    background: $color-slate-600;
+    background: $color-slate-500;
   }
 }
