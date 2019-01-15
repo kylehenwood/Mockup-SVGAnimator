@@ -1107,27 +1107,35 @@ html {
 .toolbar__item {
   padding: 0 16px; }
 
-.toolbar-icon {
-  padding: 10px;
-  width: 36px;
-  height: 36px;
-  border-radius: 4px; }
-
-.toolbar-icon--blue {
-  background: #00B9F7; }
-
-.toolbar-icon--pink {
-  background: #E91E63; }
-
-.toolbar-icon--purple {
-  background: #8D3BFC; }
-
 .toolbar-item {
+  cursor: pointer;
+  user-select: none;
   height: 80px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   flex-direction: column; }
+  .toolbar-item:hover .toolbar-item__icon {
+    box-shadow: 0 0 0 2px white; }
+  .toolbar-item:active .toolbar-item__icon {
+    box-shadow: 0 0 0 0 white, inset 0 0 0 2px white; }
+
+.toolbar-item__icon {
+  transition: all 80ms ease-out;
+  border-radius: 4px;
+  padding: 10px;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 0 0 0 white; }
+
+.toolbar-item__icon--blue {
+  background: #00B9F7; }
+
+.toolbar-item__icon--pink {
+  background: #E91E63; }
+
+.toolbar-item__icon--purple {
+  background: #8D3BFC; }
 
 .toolbar-item__text {
   width: 100%;
