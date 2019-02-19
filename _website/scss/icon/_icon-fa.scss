@@ -1,0 +1,98 @@
+// Icons
+// Using the flaticons stroke icon set
+@font-face {
+  font-family: 'fa-solid';
+  src: url('../fonts/fontAwesome/fa-solid-free.otf');
+}
+
+
+.fa-icon:before {
+  font-family: 'fa-solid';
+  line-height: 1;
+  display: block;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: normal!important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+.fa-16 {
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+  color: white;
+}
+
+.fa-blue {color:$color-fluro-blue;}
+.fa-green {color:$color-fluro-green;}
+.fa-pink {color:$color-fluro-pink;}
+.fa-white {color:white;}
+
+// fa-icons
+.fa--ruler-combined:before {content:'\f546';}
+
+.fa--angle-left:before {content:'\f104';}
+.fa--angle-right:before {content:'\f105';}
+.fa--angle-up:before {content:'\f106';}
+.fa--angle-down:before {content:'\f107';}
+
+.fa--arrow-left:before {content:'\f060';}
+.fa--arrow-right:before {content:'\f061';}
+.fa--arrow-up:before {content:'\f062';}
+.fa--arrow-down:before {content:'\f063';}
+.fa--arrows-alt:before {content:'\f0b2';} //move
+
+
+.fa--chevron-left:before {content:'\f053';}
+.fa--chevron-right:before {content:'\f054';}
+.fa--chevron-up:before {content:'\f077';}
+.fa--chevron-down:before {content:'\f078';}
+
+.fa--caret-down:before {content:'\f0d7';}
+
+.fa--check:before {content:'\f00c';}
+.fa--cog:before {content:'\f013';}
+.fa--cogs:before {content:'\f085';}
+.fa--cloud-upload-alt:before {content:'\f382';}
+.fa--code:before {content:'\f121';}
+.fa--crop:before {content:'\f125';}
+.fa--columns:before {content:'\f0db';}
+
+
+.fa--ellipses-v:before {content:'\f142';}
+.fa--ellipses-h:before {content:'\f141';}
+
+.fa--expand:before {content:'\f065';}
+.fa-expand-arrows-alt:before {content:'\f31e';}
+
+.fa--infinity:before {content:'\f534';}
+.fa--file:before {content:'\f15b';}
+.fa--folder:before {content:'\f07b';}
+.fa--folder-open:before {content:'\f07c';}
+
+
+.fa--minus:before {content:'\f068';}
+.fa--plus:before {content:'\f067';}
+
+.fa--pause:before {content:'\f04c';}
+.fa--play:before {content:'\f04b';}
+.fa--stop:before {content:'\f04d';}
+
+.fa--redo:before {content:'\f01e';}
+
+.fa--object-group:before {content:'\f247';}
+.fa--object-ungroup:before {content:'\f248';}
+
+.fa--step-backward:before {content:'\f048';}
+.fa--stopwatch:before {content:'\f2f2';}
+
+.fa--unlock:before {content:'\f09c';}
+.fa--unlink:before {content:'\f127';}
+
+.fa--lock:before {content:'\f023';}
+.fa--lock-open:before {content:'\f3c1';}
+
+
+
+.fa--check:before {content:'';}

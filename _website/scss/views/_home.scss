@@ -1,0 +1,14 @@
+.home-banner {
+  position: relative;
+  height: 800px;
+  opacity: 0.6;
+  background: linear-gradient(-45deg, #00B9F7, #8D3BFC);
+}
+
+.home-banner__canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
