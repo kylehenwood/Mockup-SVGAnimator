@@ -4,13 +4,13 @@ var vanimator = {
   container:'',
   canvas:'',
   context:'',
-  gridSize: 32,
-  panels: 8,
+  size: 32,
+  panels: 5,
   alphaMax: 0.2,
   alphaMin: 0,
+  alphaSpeed: 0.001
 }
 
-const size = 32;
 var pool = [];
 var panels = [];
 
@@ -64,11 +64,12 @@ function drawTriangles() {
 function createTriangles() {
   let rowCount = 0;
   let alternate = true;
+  const size = vanimator.size;
 
   // populate the shape array
   while (rowCount < vanimator.canvas.height) {
     createRow(rowCount,alternate);
-    rowCount+=(size);
+    rowCount+=vanimator.size;
     if (alternate === true) {
       alternate = false;
     } else {
@@ -105,32 +106,48 @@ function createTriangles() {
   }
 
 
+  // create one canvas for the shape.
+  var shape = {
+    canvas:null,
+    context:null,
+  };
+  shape.canvas = document.createElement('canvas');
+  shape.canvas.width = size;
+  shape.canvas.height = size;
+  shape.context = shape.canvas.getContext('2d');
+
+  // draw the shape
+  shape.context.fillStyle = 'white';
+  shape.context.beginPath();
+  shape.context.moveTo(0,0);
+  shape.context.lineTo(size,0);
+  shape.context.lineTo(size/2,size);
+  shape.context.lineTo(0,0);
+  shape.context.closePath();
+  shape.context.fill();
+
+  // // Squares
+  // shape.context.rect(element.posX+1,element.posY+1,size-2,size-2);
+  // shape.context.fill();
+
+  // // Circles
+  // shape.context.beginPath();
+  // shape.context.arc(element.posX, element.posY, 4, 0, Math.PI*2, true);
+  // shape.context.closePath();
+
   // split the shapes to canvases
   for (i = 0; i < pool.length; i++) {
     const element = pool[i];
     const layer = element.layer-1;
     const context = panels[layer].context;
 
-    context.fillStyle = 'rgba(255,255,255,1)';
-    context.beginPath();
-    context.moveTo(element.posX,element.posY);
-    context.lineTo(element.posX+32,element.posY);
-    context.lineTo(element.posX+16,element.posY+32);
-    context.lineTo(element.posX,element.posY);
-    context.fill();
-
+    context.drawImage(shape.canvas,element.posX,element.posY);
   }
 }
 
-
-function randomAlpha() {
-  var alpha = rand(1,100);
-      alpha = (alpha/100)*0.4;
-  return alpha;
-}
-
-
+// create a row of triangles
 function createRow(row,alternate) {
+  const size = vanimator.size;
   // center shape
   let center = vanimator.canvas.width / 2;
       center = center - size/2;
@@ -143,19 +160,17 @@ function createRow(row,alternate) {
     posX: center,
     posY: row,
     layer: rand(1,vanimator.panels),
-    anim: false
   }
   pool.push(elem);
 
   // draw squares to the left of the center
   let startPos = center;
   while (startPos > 0) {
-    startPos-=32;
+    startPos-=size;
     var elem = {
       posX: startPos,
       posY: row,
       layer: rand(1,vanimator.panels),
-      anim: false
     }
     pool.push(elem);
   }
@@ -163,12 +178,11 @@ function createRow(row,alternate) {
   // draw squares to the right of center
   let endPos = center;
   while (endPos < vanimator.canvas.width) {
-    endPos+=32;
+    endPos+=size;
     var elem = {
       posX: endPos,
       posY: row,
       layer: rand(1,vanimator.panels),
-      anim: false
     }
     pool.push(elem);
   }
@@ -186,7 +200,7 @@ function renderShapes() {
     // decrease opacity
     if (panel.anim === false) {
       if (panel.alpha > vanimator.alphaMin) {
-        panel.alpha -= 0.002;
+        panel.alpha -= vanimator.alphaSpeed;
         if (panel.alpha < 0) {
           panel.alpha = 0;
         }
@@ -197,16 +211,16 @@ function renderShapes() {
     // increase opacity
     } else {
       if (panel.alpha < vanimator.alphaMax) {
-        panel.alpha += 0.002;
+        panel.alpha += vanimator.alphaSpeed;
       } else {
         panel.anim = false;
       }
     }
 
-    context.save();
+    //context.save();
     context.globalAlpha = panel.alpha;
     context.drawImage(panel.canvas,0,0);
-    context.restore();
+    //context.restore();
   }
 }
 
