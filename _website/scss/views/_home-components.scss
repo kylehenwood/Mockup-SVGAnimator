@@ -1,0 +1,90 @@
+// Components for mock home page
+
+.feature {
+  padding: 128px 0;
+}
+
+
+.feature__content {
+  width: 50%;
+  float: left;
+  height: 800px;
+}
+.feature__image {
+  width: 50%;
+  float: left;
+  background: $color-slate-300;
+  border-radius: 8px;
+  height: 800px;
+  box-shadow: $shadow-400;
+}
+
+
+
+
+
+.feature-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.feature-content__icon {
+  width: 48px;
+  height: 48px;
+  background: $color-fluro-blue;
+  border-radius: 8px;
+  margin: 0 0 32px;
+}
+.feature-content__title {
+  font-size: 32px;
+  line-height: 40px;
+  color: white;
+  margin: 0 0 16px;
+  padding: 0 32px 0 0;
+}
+.feature-content__description {
+  font-size: 20px;
+  line-height: 28px;
+  margin: 0 0 40px;
+  padding: 0 32px 0 0;
+}
+.feature-content__quote {
+  border-top: 2px solid $color-slate-300;
+  padding: 40px 32px 0 0;
+}
+
+
+
+
+//
+.feature-quote {}
+.feature-quote__quote {
+  font-size: 18px;
+  font-style: italic;
+  line-height: 24px;
+  margin: 0 0 32px;
+}
+
+.feature-quote__author {
+  position: relative;
+  padding: 0 0 0 80px;
+}
+.feature-quote__avatar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+.feature-quote__name {
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: bold;
+}
+.feature-quote__company {
+  font-size: 20px;
+  line-height: 32px;
+}

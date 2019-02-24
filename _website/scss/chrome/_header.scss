@@ -2,7 +2,7 @@
 .header {
   position: relative;
   height: 64px;
-  padding: 0 160px 0 96px;
+  padding: 0 200px 0 96px;
 }
 .header__logo {
   position: absolute;
@@ -17,7 +17,7 @@
 .header__auth {
   padding: 12px 0 12px 40px;
   position: absolute;
-  width: 160px;
+  width: 200px;
   top: 0;
   right: 0;
 }
@@ -31,7 +31,7 @@
   display: block;
   height: 40px;
   line-height: 40px;
-  width: 90px;
+  width: 48px;
   background: white;
   border-radius: 4px;
   &:hover {
@@ -62,8 +62,8 @@
   height: 64px;
   position: relative;
   margin: 0 8px;
-  font-weight: 600;
-  font-size: 16px;
+  font-weight: bold;
+  font-size: 14px;
   line-height: 32px;
   padding: 16px 8px;
   transition: all ease-out 160ms;
@@ -89,10 +89,13 @@
   }
   &:active {
     color: rgba(white,1);
-    opacity: 1;
+    border-bottom: 2px solid white;
     .navigation__item-label {
       transition: all ease-out 40ms;
       transform: translateY(2px);
+    }
+    &:before {
+      opacity: 0.5;
     }
   }
 }
@@ -103,7 +106,7 @@
   color: white;
   border-bottom: 2px solid white;
   &:before {
-    opacity: 1;
+    opacity: 1!important;
     background: linear-gradient(to top, rgba(white,0.2), rgba(white,0));
   }
 }

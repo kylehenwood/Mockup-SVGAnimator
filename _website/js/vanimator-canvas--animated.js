@@ -5,7 +5,7 @@ var vanimator = {
   context:'',
   size: 32,
   panels: 12,
-  alphaMax: 0.2,
+  alphaMax: 0.4,
   alphaMin: 0,
   animated: false
 }
@@ -17,7 +17,7 @@ var vanimator = {
 // populate every canvas background on the page with triangles
 $(document).ready(function() {
   vanimator.alphaSpeed = (vanimator.alphaMax-vanimator.alphaMin)/vanimator.panels;
-  vanimator.alphaSpeed = vanimator.alphaSpeed*0.05;
+  vanimator.alphaSpeed = vanimator.alphaSpeed*0.02;
 
   setupBackground();
 });
@@ -32,10 +32,6 @@ $(window).resize(function(){
 
 // for each background element create panels and create shapes
 function setupBackground() {
-
-  $(document).unbind('animate');
-  loop();
-
   const containers = $('.js-vanimator-bg');
   containers.each(function(){
 
@@ -56,13 +52,12 @@ function setupBackground() {
     renderShapes(background);
     renderPanels(background);
 
-    if (vanimator.animated === true) {
-      $(document).on('animate',function(){
-        clearCanvas(background);
-        renderPanels(background);
-      });
-    }
+    $(document).on('animate',function(){
+      clearCanvas(background);
+      renderPanels(background);
+    });
 
+    loop();
   });
 }
 
@@ -74,7 +69,7 @@ function clearCanvas(background) {
 //
 // ------
 // loop
-function loop() {
+function loop(background) {
   requestAnimationFrame(loop);
   $(document).trigger('animate');
 }
@@ -96,15 +91,19 @@ function createTriangles(background) {
 
     // find the center
     let center = background.canvas.width/2;
-    if (alternate) {
+
+    if (alternate === true) {
       center -= size/2;
     }
+
+
     var startPos = center;
 
     // find out where the first triangle shall be placed.
     while (startPos > 0) {
       startPos-=size;
     }
+
     // draw shapes from left to right.
     while (startPos < background.canvas.width) {
       var elem = {
@@ -117,9 +116,9 @@ function createTriangles(background) {
     }
     rowCount+=size;
   }
+
   return shapes;
 }
-
 
 // render all created shapes to canvas panels
 function renderShapes(background) {

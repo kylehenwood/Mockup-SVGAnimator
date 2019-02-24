@@ -43,6 +43,8 @@ html {
 
 
 // _components
+@import "components/_recent-features";
+@import "components/_alertbar";
 @import "components/_section-quote";
 @import "components/_section-signup";
 @import "components/_section-help";
@@ -65,3 +67,4 @@ html {
 
 // _views
 @import "views/_home";
+@import "views/_home-components";

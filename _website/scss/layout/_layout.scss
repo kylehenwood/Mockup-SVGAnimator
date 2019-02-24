@@ -1,7 +1,7 @@
 // layout
 
 html {
-  height: 100%;
+  //height: 100%;
   min-width: 320px;
   background: $color-slate-700;
 }
@@ -31,11 +31,48 @@ html {
 
 // Footer
 .layout__footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  height: 400px;
   width: 100%;
   padding: 0 16px;
-  background: white;
+  background: $color-slate-400;
   overflow: hidden;
+}
+
+
+
+
+.layout__section {
+  padding: 0 16px;
+}
+
+
+.layout__section--dark {
+  background: $color-slate-800;
+}
+
+
+
+// triangle background.
+// requires two containers for child elements
+// - content element
+// - background canvas element stretched with positioning
+
+.layout__triangles {
+  padding: 0 16px;
+  position: relative;
+  background: linear-gradient(to right, #00B9F7, #8D3BFC);
+  background: linear-gradient(to right, #471d80, #8D3BFC);
+}
+
+.layout__triangles-content {
+  position: relative;
+  z-index: 5;
+}
+.layout__triangles-canvas {
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }

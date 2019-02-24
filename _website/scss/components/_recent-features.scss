@@ -1,0 +1,41 @@
+.recent-features {
+  padding: 128px 0;
+}
+.recent-features__title {
+  margin: 0 0 32px;
+  color: white;
+  font-size: 32px;
+  line-height: 40px;
+}
+.recent-features__container {}
+
+
+// feature block
+.new-feature {
+  position: relative;
+  padding: 40px 0 40px 160px;
+  border-bottom: 2px solid $color-slate-300;
+}
+.new-feature__date {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 40px 0;
+  font-size: 18px;
+  line-height: 32px;
+}
+.new-feature__title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  color: white;
+  margin: 0 0 16px;
+}
+.new-feature__description {
+  margin: 0 0 24px;
+  font-size: 16px;
+  line-height: 24px;
+}
+.new-feature__more {
+  width: 128px;
+}

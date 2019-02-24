@@ -43,6 +43,18 @@ if (isset($_GET['pageID'])) {
 }
 ?>
 
+<div class="layout__alert">
+
+  <div class="alertbar">
+    <div class="alertbar__content">
+      <p><strong>New feature:</strong> We've just added a new feature.<a>Read more</a></p>
+    </div>
+    <div class="alertbar__dismiss">
+      <span class="fa-icon fa-16 fa--close"></span>
+    </div>
+  </div>
+
+</div>
 
 <div class="layout__header">
 
@@ -62,14 +74,14 @@ if (isset($_GET['pageID'])) {
           <div class="navigation__item">
             <div class="navigation__item-label">Features</div>
           </div>
-          <div class="navigation__item">
+          <!-- <div class="navigation__item">
             <div class="navigation__item-label">Pricing</div>
-          </div>
+          </div> -->
         </div>
 
       </div>
       <div class="header__auth">
-        <a class="button button--40 button--white-stroke">Sign in</a>
+        <a class="button button--40 button--grey" href="/Mockup-SVGAnimator/_application/">Launch app</a>
       </div>
     </div>
 
