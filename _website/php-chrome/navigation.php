@@ -81,7 +81,7 @@ if (isset($_GET['pageID'])) {
 
       </div>
       <div class="header__auth">
-        <a class="button button--40 button--grey" href="/Mockup-SVGAnimator/_application/">Launch app</a>
+        <a class="button button--40 button--grey" href="/Mockup-SVGAnimator/_application/">Launch application</a>
       </div>
     </div>
 

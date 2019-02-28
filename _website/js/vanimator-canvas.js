@@ -7,7 +7,7 @@ var vanimator = {
   panels: 12,
   alphaMax: 0.2,
   alphaMin: 0,
-  animated: false
+  animated: true
 }
 
 // var pool = [];
@@ -17,7 +17,7 @@ var vanimator = {
 // populate every canvas background on the page with triangles
 $(document).ready(function() {
   vanimator.alphaSpeed = (vanimator.alphaMax-vanimator.alphaMin)/vanimator.panels;
-  vanimator.alphaSpeed = vanimator.alphaSpeed*0.05;
+  vanimator.alphaSpeed = vanimator.alphaSpeed*0.5;//*0.2;
 
   setupBackground();
 });
@@ -25,6 +25,7 @@ $(document).ready(function() {
 
 $(window).resize(function(){
   waitForFinalEvent(function(){
+    $(document).unbind('animate');
     setupBackground();
   },160);
 });
@@ -33,7 +34,6 @@ $(window).resize(function(){
 // for each background element create panels and create shapes
 function setupBackground() {
 
-  $(document).unbind('animate');
   loop();
 
   const containers = $('.js-vanimator-bg');
@@ -52,14 +52,20 @@ function setupBackground() {
     background.context = background.canvas.getContext('2d');
     background.panels = createPanels(background);
     background.shapes = createTriangles(background);
+    background.render = 0;
 
     renderShapes(background);
     renderPanels(background);
 
     if (vanimator.animated === true) {
       $(document).on('animate',function(){
-        clearCanvas(background);
-        renderPanels(background);
+        if (background.render === 5) {
+          background.render = 0;
+          clearCanvas(background);
+          renderPanels(background);
+        }
+        background.render++;
+        console.log(background.render);
       });
     }
 

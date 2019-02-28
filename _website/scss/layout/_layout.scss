@@ -18,9 +18,12 @@ html {
 
 // Header
 .layout__header {
+  position: relative;
+  z-index:5;
   height: 64px;
   width: 100%;
   padding: 0 16px;
+  margin: 0 0 -2px;
   background: $color-slate-400;
   box-shadow: inset 0 -2px 0 $color-fluro-purple;
 }
@@ -42,7 +45,7 @@ html {
 
 
 .layout__section {
-  padding: 0 16px;
+  padding: 64px 16px;
 }
 
 
@@ -62,6 +65,8 @@ html {
   position: relative;
   background: linear-gradient(to right, #00B9F7, #8D3BFC);
   background: linear-gradient(to right, #471d80, #8D3BFC);
+  border-top: 2px solid $color-fluro-purple;
+  border-bottom: 2px solid $color-fluro-purple;
 }
 
 .layout__triangles-content {
