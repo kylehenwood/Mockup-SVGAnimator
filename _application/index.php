@@ -11,7 +11,7 @@ function displayContent()	{
 
       case $pageName == 'home';
       $title = 'VAnimator - Application';
-      $content = setContent('./php-views/application/_construct.php');
+      $content = setContent('./php-views/_construct.php');
       break;
 
       // 404 page not found
@@ -23,7 +23,7 @@ function displayContent()	{
   } else {
     // no page id set -> home page
     $title = 'VAnimator - Application';
-    $content = setContent('./php-views/application/_construct.php');
+    $content = setContent('./php-views/_construct.php');
   }
 
 

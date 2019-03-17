@@ -72,18 +72,6 @@ $color-green-700: #388E3C;
 $color-green-800: #2E7D32;
 $color-green-900: #1B5E20;
 
-// Teal
-$color-teal-050: #E0F2F1;
-$color-teal-100: #B2DFDB;
-$color-teal-200: #80CBC4;
-$color-teal-300: #4DB6AC;
-$color-teal-400: #26A69A;
-$color-teal-500: #009688;
-$color-teal-600: #00897B;
-$color-teal-700: #00796B;
-$color-teal-800: #00695C;
-$color-teal-900: #004D40;
-
 // Purple
 $color-purple-050: #F3E5F5;
 $color-purple-100: #E1BEE7;
@@ -96,59 +84,78 @@ $color-purple-700: #7B1FA2;
 $color-purple-800: #6A1B9A;
 $color-purple-900: #4A148C;
 
-// Red
-$color-red-050: #FFEBEE;
-$color-red-100: #FFCDD2;
-$color-red-200: #EF9A9A;
-$color-red-300: #E57373;
-$color-red-400: #EF5350;
-$color-red-500: #F44336;
-$color-red-600: #E53935;
-$color-red-700: #D32F2F;
-$color-red-800: #C62828;
-$color-red-900: #B71C1C;
 
-// Orange
-$color-orange-050: #FFF3E0;
-$color-orange-100: #FFE0B2;
-$color-orange-200: #FFCC80;
-$color-orange-300: #FFB74D;
-$color-orange-400: #FFA726;
-$color-orange-500: #FF9800;
-$color-orange-600: #FB8C00;
-$color-orange-700: #F57C00;
-$color-orange-800: #EF6C00;
-$color-orange-900: #E65100;
-
-// Yellow
-$color-yellow-050: #FFFDE7;
-$color-yellow-100: #FFF9C4;
-$color-yellow-200: #FFF59D;
-$color-yellow-300: #FFF176;
-$color-yellow-400: #FFEE58;
-$color-yellow-500: #FFEB3B;
-$color-yellow-600: #FDD835;
-$color-yellow-700: #FBC02D;
-$color-yellow-800: #F9A825;
-$color-yellow-900: #F57F17;
-
+// -- VANIMATOR PALLETE
 
 
 // slate colors
-$color-slate-100: #9FA7B1; // text only
-$color-slate-200: #565D67; // timeline small indent
-$color-slate-300: #4D505A; //
-$color-slate-400: #313741; //
-$color-slate-500: #282C35; //
-$color-slate-600: #1F242A; //
-$color-slate-700: #171A20; // border dark
-//$color-slate-800: #888;
-//$color-slate-900: #999;
-$color-slate-000: #171A20; // border dark
+$color-slate-100: #83878D;
+$color-slate-200: #6F737B;
+$color-slate-300: #5A5F67;
+$color-slate-400: #464B55;
+$color-slate-500: #313742;
+$color-slate-600: #2C313B;
+$color-slate-700: #272C34;
+$color-slate-800: #22262E;
+$color-slate-900: #1D2127;
+$color-slate-000: #181B20;
 
-$color-fluro-blue: #00B9F7;
-$color-fluro-purple: #8D3BFC;
-$color-fluro-purple-light: #965AFF;
-$color-fluro-pink: #E91E63;
-$color-fluro-green: #00E676;
-$color-fluro-orange: #FFAB00;
+// stone
+$color-stone-100: #9DA6B0;
+$color-stone-200: #8D97A3;
+$color-stone-300: #7D8896;
+$color-stone-400: #6D7A89;
+$color-stone-500: #5D6B7C;
+$color-stone-600: #53606F;
+$color-stone-700: #4A5563;
+$color-stone-800: #404A56;
+$color-stone-900: #37404A;
+$color-stone-000: #2E353D;
+
+// blue
+$color-blue-100: #66D5FA;
+$color-blue-200: #4DCEF9;
+$color-blue-300: #33C7F8;
+$color-blue-400: #1AC0F7;
+$color-blue-500: #00B9F7;
+$color-blue-600: #00A6DD;
+$color-blue-700: #0094C5;
+$color-blue-800: #0081AC;
+$color-blue-900: #006F94;
+$color-blue-000: #005C7B;
+
+// purple
+$color-purple-100: #BA88FF;
+$color-purple-200: #AF74FF;
+$color-purple-300: #A360FF;
+$color-purple-400: #984DFF;
+$color-purple-500: #8D39FF;
+$color-purple-600: #7E33E5;
+$color-purple-700: #702DCC;
+$color-purple-800: #6227B2;
+$color-purple-900: #542299;
+$color-purple-000: #461C7F;
+
+// pink
+$color-pink--100: #F178A1;
+$color-pink--200: #EF6192;
+$color-pink--300: #ED4B82;
+$color-pink--400: #EB3472;
+$color-pink--500: #E91E63;
+$color-pink-600: #D11A58;
+$color-pink-700: #BA184F;
+$color-pink-800: #A21445;
+$color-pink-900: #8B123B;
+$color-pink-000: #740E31;
+
+// green
+$color-green-100: #66F0AC;
+$color-green-200: #4DED9F;
+$color-green-300: #33EB91;
+$color-green-400: #1AE883;
+$color-green-500: #00E676;
+$color-green-600: #00CE69;
+$color-green-700: #00B85E;
+$color-green-800: #00A052;
+$color-green-900: #008A46;
+$color-green-000: #00723A;

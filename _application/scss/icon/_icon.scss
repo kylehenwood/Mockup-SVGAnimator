@@ -22,12 +22,11 @@
   font-family: 'Flaticons Social';
 }
 
-.flat-icon:before {
+.icon:before {
   font-family: 'Flaticons Stroke';
 }
 
-
-.flat-icon:before,
+.icon:before,
 .social-icon:before {
   line-height: 1;
   display: block;
@@ -38,9 +37,51 @@
   -webkit-font-smoothing: antialiased;
 }
 
-
 // social icons
 .facebook-icon:before {content:'\e7d0';}
 .twitter-icon:before {content:'\e7d1';}
 .pinterest-icon:before {content:'\e7d5';}
 .googleplus-icon:before {content:'\e7d9';}
+
+//
+.icon--16,
+.icon--16:before {
+  display: block;
+  width: 16px;
+  height: 16px;
+  font-weight: normal;
+  line-height: 16px;
+  text-align: center;
+}
+
+
+// icons
+.icon--folder:before {content:'\e3fc';}
+.icon--folder-open:before {content:'\e402';}
+.icon--folder-out:before {content:'\e403';}
+
+.icon--chevron-up:before {content:'\e5a8';}
+.icon--chevron-down:before {content:'\e5a9';}
+.icon--chevron-left:before {content:'\e5aa';}
+.icon--chevron-right:before {content:'\e5ab';}
+.icon--shape {
+  width: 16px;
+  border: 2px solid $color-blue-500;
+  border-radius: 2px;
+  padding: 2px;
+  &:before {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: $color-blue-500;
+  }
+}
+
+
+.icon--undo:before {content:'\e499';}
+.icon--redo:before {content:'\e49b';}
+
+.icon--tick:before {content:'\e49b';}
+.icon--cross:before {content:'\e49b';}
+.icon--refresh:before {content:'\e58b';}

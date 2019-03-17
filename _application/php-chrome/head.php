@@ -15,7 +15,7 @@
 	<!-- <script type="text/javascript" src="js/vendor/pjax-standalone.js"></script> -->
 	<script type="text/javascript" src="js/vendor/jquery.pjax.js"></script>
 	<script type="text/javascript" src="js/pjax-connect.js"></script>
-	<link rel="icon" type="image/png" href="mark_favicon.png" />
+	<link rel="icon" type="image/png" href="favicon.png" />
 
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">

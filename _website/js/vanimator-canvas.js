@@ -20,6 +20,7 @@ $(document).ready(function() {
   vanimator.alphaSpeed = vanimator.alphaSpeed*0.5;//*0.2;
 
   setupBackground();
+  loop();
 });
 
 
@@ -33,8 +34,6 @@ $(window).resize(function(){
 
 // for each background element create panels and create shapes
 function setupBackground() {
-
-  loop();
 
   const containers = $('.js-vanimator-bg');
   containers.each(function(){
@@ -261,6 +260,6 @@ function renderPanels(background) {
     context.globalAlpha = renderedAlpha;
     context.drawImage(panel.canvas,0,0);
 
-    console.log(i);
+    //console.log(i);
   }
 }

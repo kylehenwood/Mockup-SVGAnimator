@@ -63,7 +63,7 @@ if (isset($_GET['pageID'])) {
 
     <div class="header">
       <div class="header__logo">
-        <div class="logo"></div>
+        <a class="logo" href="index.php?pageID=splash"></a>
       </div>
       <div class="header__navigation">
 

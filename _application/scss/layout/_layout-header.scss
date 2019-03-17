@@ -1,0 +1,25 @@
+// header
+
+.header {
+  position: relative;
+  height: 72px;
+  padding: 16px 24px 16px 88px;
+}
+.header__logo {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 16px 24px;
+  &:before {
+    content: '';
+    display: block;
+    background: $color-purple-500;
+    height: 40px;
+    width: 40px;
+    border-radius: 4px;
+  }
+}
+.header__navigation {}
+
+
+//--

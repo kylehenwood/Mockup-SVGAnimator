@@ -1,0 +1,191 @@
+// Components for mock home page
+
+.feature {
+  padding: 128px 0;
+}
+
+
+.feature__content {
+  width: 50%;
+  float: left;
+  height: 800px;
+}
+.feature__image {
+  width: 50%;
+  float: left;
+  background: $color-slate-300;
+  border-radius: 8px;
+  height: 800px;
+  box-shadow: $shadow-400;
+}
+
+
+
+
+
+.feature-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.feature-content__icon {
+  width: 48px;
+  height: 48px;
+  background: $color-fluro-blue;
+  border-radius: 8px;
+  margin: 0 0 32px;
+}
+.feature-content__title {
+  font-size: 32px;
+  line-height: 40px;
+  color: white;
+  margin: 0 0 16px;
+  padding: 0 32px 0 0;
+}
+.feature-content__description {
+  font-size: 20px;
+  line-height: 28px;
+  margin: 0 0 40px;
+  padding: 0 32px 0 0;
+}
+.feature-content__quote {
+  border-top: 2px solid $color-slate-300;
+  padding: 40px 32px 0 0;
+}
+
+
+
+
+//
+.feature-quote {}
+.feature-quote__quote {
+  font-size: 18px;
+  font-style: italic;
+  line-height: 28px;
+  margin: 0 0 32px;
+}
+
+.feature-quote__author {
+  position: relative;
+  padding: 0 0 0 80px;
+}
+.feature-quote__avatar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+.feature-quote__name {
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: bold;
+}
+.feature-quote__company {
+  font-size: 20px;
+  line-height: 32px;
+}
+
+
+
+
+
+
+
+
+// ------
+.vanimator-inception {
+  padding: 64px 0;
+}
+.vanimator-inception__title {
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 40px;
+  color: white;
+  margin: 0 0 16px;
+}
+.vanimator-inception__description {
+  font-size: 20px;
+  line-height: 28px;
+  margin: 0 0 40px;
+}
+
+
+
+
+
+
+// ------
+.workflow {}
+.workflow__step {
+  float: left;
+  width: 25%;
+  padding: 24px 0;
+  background: $color-fluro-purple;
+  border: 1px solid $color-slate-700;
+}
+
+.workflow-item {
+  position: relative;
+  padding: 24px 32px;
+  height: 240px;
+}
+.workflow-item__image {
+  //position: absolute;
+  // top: 0;
+  // left: 0;
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 8px;
+  margin: 0 0 24px;
+}
+.workflow-item__title {
+  font-size: 20px;
+  color: white;
+  line-height: 28px;
+}
+.workflow-item__description {}
+
+
+
+
+
+
+//---
+.feature-grid {}
+.feature-grid__item {
+  padding: 40px 0;
+  float: left;
+  width: 25%;
+}
+
+
+.vanimator-feature {}
+.vanimator-feature__image {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 8px;
+  margin: 0 0 24px;
+}
+.vanimator-feature__title {}
+.vanimator-feature__description {}
+
+
+
+
+
+
+//---
+
+.section {
+  padding: 64px 0;
+}
+.section__heading {
+  margin: 0 0 16px;
+}
+.section__content {}

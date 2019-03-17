@@ -1,7 +1,17 @@
 // javascripts
 $(document).ready(function(){
-  alignRulers();
-  tabControl();
+
+
+  $('.js-layer-group').click(function(){
+    const parent = $(this).parent();
+
+    parent.toggleClass('layers__group--collapsed');
+
+  });
+
+
+  // alignRulers();
+  // tabControl();
 });
 
 // rulers

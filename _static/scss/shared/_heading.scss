@@ -1,0 +1,50 @@
+//---------------
+// Heading styles
+//---------------
+
+
+// Heading styles
+.heading-1 {
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 40px;
+  color: white;
+  font-family: $font-family;
+  @include screen-mob {
+    font-size: 28px;
+  }
+}
+
+// .heading-2 {
+//   font-size: 32px;
+//   font-weight: bold;
+//   font-family: $font-family-heading;
+//   line-height: 1.2;
+//   @include screen-mob {
+//     font-size: 24px;
+//   }
+// }
+//
+// .heading-3 {
+//   font-size: 24px;
+//   font-weight: bold;
+//   font-family: $font-family-heading;
+//   line-height: 1.4;
+//   @include screen-mob {
+//     font-size: 20px;
+//   }
+// }
+// .heading-4 {
+//   font-size: 18px;
+//   font-weight: normal;
+//   line-height: 1.2;
+//   @include screen-mob {
+//     font-size: 16px;
+//   }
+// }
+//
+// .heading-subtitle {
+//   margin: 16px 0 0;
+//   font-size: 16px;
+//   line-height: 1.2;
+// }

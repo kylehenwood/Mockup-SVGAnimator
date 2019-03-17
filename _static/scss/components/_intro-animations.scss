@@ -1,0 +1,88 @@
+// only allow these if modernizr has added the class "cssanimations" to the HTML tag
+.cssanimations {
+
+  // staggered animation
+  .anim--delay {
+    opacity: 0;
+    &:nth-child(1) {animation-delay: 080ms;}
+    &:nth-child(2) {animation-delay: 160ms;}
+    &:nth-child(3) {animation-delay: 240ms;}
+    &:nth-child(4) {animation-delay: 320ms;}
+  }
+
+
+  // slide in right
+  .anim--in-right {
+    animation-name: slide-in-right;
+    animation-duration: 160ms;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+  @keyframes slide-in-right {
+    000% {
+      opacity: 0.4;
+      transform: translateX(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+
+  // slide in left
+  .anim--in-left {
+    animation-name: slide-in-left;
+    animation-duration: 160ms;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+  @keyframes slide-in-left {
+    000% {
+      opacity: 0.4;
+      transform: translateX(-40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+
+  // slide in top
+  .anim--in-top {
+    animation-name: slide-in-top;
+    animation-duration: 160ms;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+  @keyframes slide-in-top {
+    000% {
+      opacity: 0.4;
+      transform: translateY(-40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+
+  // slide in bottom
+  .anim--in-bottom {
+    animation-name: slide-in-bottom;
+    animation-duration: 160ms;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+  @keyframes slide-in-bottom {
+    000% {
+      opacity: 0.4;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}

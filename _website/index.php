@@ -6,12 +6,19 @@ function displayContent()	{
     $pageName = $_GET['pageID'];
     $content;
     $title = 'No Title';
+    $chrome = true;
 
     switch ($pageName) {
 
       case $pageName == 'home';
       $title = 'VAnimator - Simple SVG animation';
       $content = setContent('./php-views/home/_construct.php');
+      break;
+
+      case $pageName == 'splash';
+      $title = 'VAnimator - Coming soon';
+      $content = setContent('./php-views/splash/_construct.php');
+      $chrome = false;
       break;
 
       // 404 page not found
@@ -28,24 +35,31 @@ function displayContent()	{
 
 
 
-
-  // if pjax request, only render the content & set the title, else render the full page
-  if(isset($_SERVER['HTTP_X_PJAX']) && $_SERVER['HTTP_X_PJAX'] == 'true'){
-  	echo $content;
-  	echo "<title>{$title}</title>";
-  } else{
+  if ($chrome === false) {
 
     include './php-chrome/head.php';
-    include './php-chrome/navigation.php';
-
-    echo '<div id="js-pjax-container">';
     echo $content;
-    echo '</div>';
-
     include './php-chrome/footer.php';
 
+  } else {
+
+    // if pjax request, only render the content & set the title, else render the full page
+    if(isset($_SERVER['HTTP_X_PJAX']) && $_SERVER['HTTP_X_PJAX'] == 'true'){
+    	echo $content;
+    	echo "<title>{$title}</title>";
+    } else{
+
+      include './php-chrome/head.php';
+      include './php-chrome/navigation.php';
+
+      echo '<div id="js-pjax-container">';
+      echo $content;
+      echo '</div>';
+
+      include './php-chrome/footer.php';
+    }
+    return false;
   }
-  return false;
 }
 
 // retrieves the page content and returns as a variable
