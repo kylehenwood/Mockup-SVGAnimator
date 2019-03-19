@@ -1,0 +1,77 @@
+//--
+.layer {
+  position: relative;
+  padding: 64px 0;
+  height: 100%;
+  border-right: 1px solid $color-slate-900;
+}
+.layer__header-detail {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 64px;
+  background: $color-slate-700;
+}
+.layer__header-timeline {
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 64px;
+  background: $color-slate-700;
+  border-left: 1px solid $color-slate-900;
+}
+
+.layer__content {
+  position: absolute;
+  z-index: 0;
+  top: 64px;
+  bottom: 64px;
+  left: 0;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  //overflow: hidden;
+
+  border-top: 1px solid $color-slate-900;
+  padding: 16px 0;
+}
+
+
+.layer__timeline-options {}
+.layer__timeline {
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+  height: 64px;
+  width: 100%;
+  border-top: 1px solid $color-slate-900;
+  background: $color-slate-500;
+}
+
+
+.layer__animation {
+  display: none;
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  background: $color-slate-500;
+}
+
+// layers list
+.layer-list {}
+.layer-list__group {
+  height: auto;
+  overflow: hidden;
+}
+.layer-list__group--collapsed {
+  height: 48px;
+}

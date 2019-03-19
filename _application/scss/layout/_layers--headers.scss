@@ -1,0 +1,43 @@
+//--
+.layer-header__detail,
+.layer-header__timeline {
+  float: left;
+  width: 50%;
+}
+.layer-header__timeline {
+  border-left: 1px solid $color-slate-900;
+}
+
+
+.header-detail {
+  position: relative;
+  height: 64px;
+  color: $color-grey-100;
+  padding: 20px 24px;
+}
+.header-detail__title {
+  color: $color-grey-100;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: bold;
+}
+.header-detail__edit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 16px 24px;
+}
+
+.header-timeline {
+  padding: 16px 24px;
+}
+.header-timeline__timeline {
+  float: left;
+  width: 50%;
+  padding: 0 4px 0 0;
+}
+.header-timeline__animations {
+  float: left;
+  width: 50%;
+  padding: 0 0 0 4px;
+}

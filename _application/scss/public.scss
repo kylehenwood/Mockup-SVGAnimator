@@ -34,12 +34,14 @@ html {
 // _layout
 @import "layout/_layout";
 @import "layout/_layout-header";
-// @import "layout/_layout-title";
-// @import "layout/_layout-toolbar";
-// @import "layout/_layout-tabs";
-// @import "layout/_layout-stage";
-// @import "layout/_layout-timeline";
-// @import "layout/_layout-editor";
+
+@import "layout/_layers";
+@import "layout/_layers--layer";
+@import "layout/_layers--timeline";
+@import "layout/_layers--headers";
+
+@import "layout/_component-animation";
+
 
 // _common
 // common components used repetitively across many pages.
@@ -62,7 +64,7 @@ html {
 // @import "components/_form";
 // @import "components/_form-grid";
 // @import "components/_form-search";
-// @import "components/_form-checkbox";
+@import "components/_form-checkbox";
 // @import "components/_breadcrumb";
 // @import "components/_switch";
 // @import "components/_switch-control";

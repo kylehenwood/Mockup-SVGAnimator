@@ -1,0 +1,106 @@
+
+//---
+.layer-control {
+  cursor: pointer;
+  position: relative;
+  background: $color-slate-700;
+  height: 48px;
+  color: $color-stone-100;
+  &:hover {
+    background: $color-slate-500;
+    .layers-item__text {
+      color: white;
+    }
+  }
+  &:active {
+    background: $color-slate-600;
+  }
+}
+
+
+.layer-control--selected {
+  background: $color-slate-500!important;
+  color: white;
+}
+
+
+
+.layer-control__item {
+  float: left;
+  border-left: 1px solid $color-slate-900;
+  width: 50%;
+}
+
+.layer-control__item-indent--0 {padding-left: 24px;}
+.layer-control__item-indent--1 {padding-left: 40px;}
+.layer-control__item-indent--2 {padding-left: 56px;}
+.layer-control__item-indent--3 {padding-left: 72px;}
+.layer-control__item-indent--4 {padding-left: 96px;}
+.layer-control__item-indent--5 {padding-left: 112px;}
+.layer-control__item-indent--6 {padding-left: 128px;}
+
+
+.layer-control__timeline {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 48px;
+  width: 50%;
+  //background: $color-slate-800;
+}
+
+
+// --
+.layers-item {
+  position: relative;
+  padding: 0 48px 0 72px;
+  line-height: 24px;
+  height: 48px;
+}
+
+.layers-item__chevron,
+.layers-item__symbol {
+  position: absolute;
+  top: 0;
+  width: 32px;
+  height: 48px;
+  padding: 16px 8px;
+  color: $color-stone-100;
+}
+
+.layers-item__chevron {
+  left: 0;
+}
+.layers-item__symbol {
+  left: 32px;
+}
+
+.layers-item__text {
+  line-height: 24px;
+  font-size: 14px;
+  padding: 12px 8px;
+}
+.layers-item__animation {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 48px;
+  height: 48px;
+  padding: 16px;
+  &:before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background: $color-pink-500;
+  }
+}
+
+.layers-item__chevron {color: $color-grey-500;}
+.layers-item__symbol {color: $color-blue-500;}
+.layers-item__animation {color: $color-grey-500;}
+
+.layers-item__symbol--mask {color: $color-pink-500;}
+.layers-item__symbol--shape {color: $color-blue-500;}
+.layers-item__symbol--group {color: $color-green-500;}

@@ -4,48 +4,45 @@
   function createLayer($indent,$chevron,$symbol,$label,$animation) {
     $html = null;
 
-    if ($chevron != null) {
-      $html .='<div class="layer-control js-layer-group">';
-    } else {
-      $html .='<div class="layer-control">';
-    }
+    //if ($chevron != null) {
+      $html .='<div class="layer-control js-layer-control">';
+    // } else {
+    //   $html .='<div class="layer-control">';
+    // }
 
-    $html .='<div class="layer-control__item">';
-    $html .='<div class="layers-item layers-item--indent-'.$indent.'">';
+    $html .='<div class="layer-control__item layer-control__item-indent--'.$indent.' js-layer-background">';
+    $html .='<div class="layers-item">';
 
     // expand // collapse
+    $html .=' <div class="layers-item__chevron js-layer-chevron">';
     if ($chevron === false) {
-      $html .=' <div class="layers-item__chevron">';
-      $html .='   <div class="icon icon--16 icon--chevron-right"></div>';
-      $html .=' </div>';
+      $html .='   <div class="icon icon--16 icon--chevron-right js-chevron"></div>';
     }
     if ($chevron === true) {
-      $html .=' <div class="layers-item__chevron">';
-      $html .='   <div class="icon icon--16 icon--chevron-down"></div>';
-      $html .=' </div>';
+      $html .='   <div class="icon icon--16 icon--chevron-down js-chevron"></div>';
     }
-    if ($chevron === null) {
-      $html .=' <div class="layers-item__empty"></div>';
-    }
+    if ($chevron === null) {}
+    $html .=' </div>';
+
 
     // symbol || icon
     $icon = '';
     if ($symbol === 'group') {
       if ($chevron === true) {
-        $icon ='<div class="icon icon--16 icon--folder-open"></div>';
+        $icon ='<div class="icon icon--16 icon--folder-open js-symbol"></div>';
       } else {
-        $icon ='<div class="icon icon--16 icon--folder"></div>';
+        $icon ='<div class="icon icon--16 icon--folder js-symbol"></div>';
       }
     }
     if ($symbol === 'mask') {
       if ($chevron === true) {
-        $icon ='<div class="icon icon--16 icon--folder-open"></div>';
+        $icon ='<div class="icon icon--16 icon--folder-open js-symbol"></div>';
       } else {
-        $icon ='<div class="icon icon--16 icon--folder"></div>';
+        $icon ='<div class="icon icon--16 icon--folder js-symbol"></div>';
       }
     }
     if ($symbol === 'shape') {
-      $icon ='<div class="icon icon--16 icon--shape"></div>';
+      $icon ='<div class="icon icon--16 icon--shape js-symbol"></div>';
     }
 
     $symbolColor;
@@ -72,11 +69,10 @@
 
 
     // text
-
-    $html .=' <div class="layers-item__text">'.$label.'</div>';
+    $html .=' <div class="layers-item__text js-layer-label">'.$label.'</div>';
 
     if ($animation === true) {
-      $html .=' <div class="layers-item__animation"></div>';
+      $html .=' <div class="layers-item__animation js-layer-animation"></div>';
     }
 
     $html .='</div>';
@@ -93,7 +89,10 @@
       $html .='</div>';
     } else {
       $html .='<div class="layer-timeline">';
-      $html .='<div class="layer-timeline__bar layer-timeline__bar--slate"></div>';
+      $html .=' <div class="layer-timeline__button">';
+      $html .='   <a class="button button--28 button--stone js-add-animation">Add animation</a>';
+      $html .=' </div>';
+      $html .=' <div class="layer-timeline__bar layer-timeline__bar--slate"></div>';
       $html .='</div>';
     }
 

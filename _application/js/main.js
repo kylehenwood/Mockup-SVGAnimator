@@ -1,116 +1,141 @@
 // javascripts
 $(document).ready(function(){
+  const animationPanel = $('.js-animation-panel');
+  const animationClose = $('.js-animation-panel-close');
 
 
-  $('.js-layer-group').click(function(){
-    const parent = $(this).parent();
+  const group = $('.js-group');
+  group.each(function(){
+    const head = $(this).children('.js-group-head');
+    const body = $(this).children('.js-group-body');
 
-    parent.toggleClass('layers__group--collapsed');
+    // expand && collapse events
+    head.on('group-expand',function(){
+      body.show();
+    });
 
+    head.on('group-collapse',function() {
+      body.hide();
+    });
   });
 
 
-  // alignRulers();
-  // tabControl();
+
+  $('.js-layer-control').each(function(){
+    const layer = $(this);
+    const group = $(this).parent();
+    const icons = {
+      chevron:$(this).find('.js-chevron'),
+      symbol: $(this).find('.js-symbol')
+    }
+
+    let layerAnimation = {
+      hideOther: false,
+      hasAnimation: false,
+      style: {},
+      animation: {},
+      keyframes: {}
+    }
+
+
+    const addAnimation = $(this).find('.js-add-animation');
+
+    let open = true;
+    let selected = false;
+
+    // only one layer can be selected at a time
+    animationClose.click(function(){
+      animationPanelClose(animationPanel);
+      layerDeselect(layer);
+    });
+
+
+    layer.click(function(event){
+      const target = $(event.target);
+      //console.log(target);
+
+      switch(true) {
+        case target.hasClass('js-layer-chevron'):
+          toggleGroupExpand(group,icons,open,layer);
+          open ^= true;
+          break;
+        case target.hasClass('js-layer-background'):
+          toggleGroupExpand(group,icons,open,layer);
+          open ^= true;
+          break;
+        case target.hasClass('js-layer-animation'):
+          layerSelect(layer);
+          animationPanelOpen(animationPanel,target);
+          break;
+        case target.hasClass('js-layer-label'):
+          event.stopPropagation();
+          layerSelect(layer);
+          animationPanelOpen(animationPanel,target);
+          break;
+        case target.hasClass('js-add-animation'):
+          event.stopPropagation();
+          layerSelect(layer);
+          animationPanelOpen(animationPanel,target);
+          break;
+        default:
+          // code block
+      }
+    });
+  });
 });
 
-// rulers
-function alignRulers(){
-  var stage = $('.js-stage');
-  var stageArtwork = $('.js-stage-artwork');
-  var stageArtworkX;
-  var stageArtworkY;
-  var rulerHorizontal = $('.js-ruler-horizontal');
-  var rulerHorizontalZero = $('.js-ruler-horizontal-zero');
-  var rulerVertical = $('.js-ruler-vertical');
-  var rulerVerticalZero = $('.js-ruler-vertical-zero');
 
-  var movedVertical = 0;
-  var movedHorizontal = 0;
+function layerControlHover() {}
 
-  // on resize run this also
-  $(window).resize(function(){
-    waitForFinalEvent(function(){
-      resizeRulers();
-    },80);
-  });
-
-  function resizeRulers(){
-    // get distance of artboard from left / top;
-    stageArtworkY = stageArtwork.offset().top - stage.offset().top;
-    stageArtworkX = stageArtwork.offset().left - stage.offset().left;
-
-    // horizontal
-    var horizontalOffset = rulerHorizontalZero.offset().left - stage.offset().left - movedHorizontal;
-    var horizontalMove = stageArtworkX-horizontalOffset;
-    movedHorizontal = horizontalMove;
-
-    rulerHorizontal.attr(
-      'style','transform:translateX('+horizontalMove+'px)'
-    );
-
-    // vertical
-    var verticalOffset = rulerVerticalZero.offset().top - stage.offset().top - movedVertical;
-    var verticalMove = stageArtworkY-verticalOffset-rulerVerticalZero.outerHeight();
-    movedVertical = verticalMove;
-
-    rulerVertical.attr(
-      'style','transform:translateY('+verticalMove+'px)'
-    );
-  };
-  resizeRulers();
+// Animation panel
+function animationPanelOpen(panel,layerId) {
+  panel.show();
 }
 
+function animationPanelClose(panel) {
+  panel.hide();
+}
 
+// Animation range
+function animationTimelineRange() {}
 
-var tabs;
-var tabLen;
+function toggleGroupExpand(group,icons,open, layer){
 
-// tab control
-function tabControl(){
-  tabs = [{
-    title: 'animator',
-    element: $('.js-tab-animator'),
-    state: 'state-animator'
-  },{
-    title: 'editor',
-    element: $('.js-tab-editor'),
-    state: 'state-editor'
-  },{
-    title: 'designer',
-    element: $('.js-tab-designer'),
-    state: 'state-designer'
-  }];
-
-  tabLen = tabs.length;
-
-  // loop through tabs
-  for (var i = 0; i < tabLen; i++) {
-    tabs[i].index = i;
-    setupTab(tabs[i]);
+  if (open == true) {
+    open = false;
+    layer.trigger('group-collapse');
+    icons.chevron.removeClass('icon--chevron-down');
+    icons.chevron.addClass('icon--chevron-right');
+    icons.symbol.removeClass('icon--folder-open');
+    icons.symbol.addClass('icon--folder');
+  } else {
+    open = true;
+    layer.trigger('group-expand');
+    icons.chevron.removeClass('icon--chevron-right');
+    icons.chevron.addClass('icon--chevron-down');
+    icons.symbol.removeClass('icon--folder');
+    icons.symbol.addClass('icon--folder-open');
   }
 }
 
-function setupTab(tab) {
-  var title = tab.title;
-  var element = tab.element;
-  var state = tab.state;
-  var index = tab.index;
-  var className = 'tabs-list__tab--active';
+let selectedLayer;
 
-  element.click(function(){
-    // remove other tabs active state
-    for (var i = 0; i < tabLen; i++) {
-      if (i != index){
-        tabs[i].element.removeClass(className);
-      }
-    }
-    // apply this tabs styles
-    element.addClass(className);
-    changeLayout(state);
-  });
+function layerSelect(element) {
+  if (selectedLayer) {
+    layerDeselect(selectedLayer);
+  }
+  selectedLayer = element;
+  element.addClass('layer-control--selected');
 }
 
-function changeLayout(state){
-  //selectedTab.addClass('tabs-list__tab--active');
+function layerDeselect(element) {
+  element.removeClass('layer-control--selected');
+}
+
+
+
+
+
+function disableAnimations(current) {
+  // disable all animations except current
 }

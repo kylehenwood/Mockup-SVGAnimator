@@ -1,0 +1,32 @@
+.animation-panel {
+  position: relative;
+  padding: 64px 24px;
+}
+.animation-panel__heading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid $color-slate-900;
+}
+.animation-panel__section {
+  padding: 16px 0;
+  border-bottom: 1px solid $color-slate-900;
+}
+
+
+
+.animation-heading {
+  position: relative;
+}
+.animation-heading__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 16px 24px;
+}
+.animation-heading__title {
+  padding: 20px 24px;
+  line-height: 24px;
+  font-weight: bold;
+}

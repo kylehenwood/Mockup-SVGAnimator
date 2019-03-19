@@ -47,8 +47,11 @@
 .icon--16,
 .icon--16:before {
   display: block;
+  user-select: none;
+  pointer-events: none;
   width: 16px;
   height: 16px;
+  font-size: 16px;
   font-weight: normal;
   line-height: 16px;
   text-align: center;
@@ -82,6 +85,6 @@
 .icon--undo:before {content:'\e499';}
 .icon--redo:before {content:'\e49b';}
 
-.icon--tick:before {content:'\e49b';}
-.icon--cross:before {content:'\e49b';}
+.icon--tick:before {content:'\e5a2';}
+.icon--cross:before {content:'\e5a3';}
 .icon--refresh:before {content:'\e58b';}

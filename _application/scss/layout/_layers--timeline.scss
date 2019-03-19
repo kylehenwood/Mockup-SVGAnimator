@@ -1,0 +1,102 @@
+.layer-timeline {
+  position: relative;
+  height: 48px;
+  padding: 20px 0;
+  margin: 0 28px;
+  // &:hover {
+  //   .layer-timeline__handle {
+  //     opacity: 1;
+  //   }
+  // }
+  &:hover {
+    .layer-timeline__button {
+      opacity: 1;
+    }
+  }
+}
+
+.layer-timeline--delay {
+  margin: 80px 0 160px;
+}
+
+.layer-timeline--animation {
+  .layer-timeline__handle {
+    opacity: 1;
+  }
+}
+
+
+//
+.layer-timeline__handle {
+  position: absolute;
+  height: 48px;
+  width: 48px;
+  padding: 20px;
+  transition: 80ms ease-in all;
+  &:before {
+    content: '';
+    display: block;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px $color-blue-500;
+    background: white;
+    transition: 80ms ease-in all;
+  }
+  &:hover:before {
+    box-shadow: 0 0 0 6px $color-blue-500;
+    background: white;
+  }
+  &:active:before {
+    box-shadow: 0 0 0 5px $color-blue-500;
+    background: white;
+  }
+}
+
+.layer-timeline__handle--active {
+  &:before {
+    box-shadow: 0 0 0 4px $color-blue-500;
+    background: white;
+  }
+}
+
+
+
+
+
+.layer-timeline__handle--start {
+  top: 0;
+  left: -20px;
+}
+.layer-timeline__handle--end {
+  top: 0;
+  right: -20px;
+}
+
+
+.layer-timeline__bar {
+  height: 8px;
+  background: $color-blue-500;
+  border-radius: 4px;
+}
+
+.layer-timeline__bar--blue {
+  background: $color-blue-500;
+}
+.layer-timeline__bar--slate {
+  background: $color-slate-300;
+  text-align: center;
+}
+
+
+
+.layer-timeline__button {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+  padding: 10px 88px;
+  border-radius: 4px;
+}

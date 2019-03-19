@@ -5,7 +5,7 @@
   cursor: pointer;
   display: block;
   position: relative;
-  padding-left: 20px;
+  padding: 8px 8px 8px 24px;
 }
 .checkbox__input {
   position: absolute;
@@ -14,18 +14,18 @@
   visibility: hidden;
 }
 .checkbox__label {
-  font-size: 16px;
+  font-size: 14px;
   padding: 6px 12px;
   line-height: 24px;
 }
 .checkbox__icon {
   position: absolute;
   z-index: 1;
-  padding: 8px 0;
+  padding: 10px 0;
   left: 0;
   top: 0;
   width: 20px;
-  height: 36px;
+  height: 40px;
   vertical-align: middle;
 
   font-family: 'Flaticons Stroke';
@@ -47,35 +47,35 @@
 .checkbox__input + .checkbox__icon {
   &:before {
     content: '';
-    background: white;
+    //background: white;
   }
 }
 .checkbox__input:hover + .checkbox__icon {
   &:before {
-    border-color: $color-grey-500;
+    border-color: $color-blue-500;
   }
 }
 .checkbox__input:active + .checkbox__icon {
   &:before {
-    border-color: $color-pink-700;
+    border-color: $color-blue-700;
   }
 }
 .checkbox__input:checked + .checkbox__icon {
   &:before {
     content: '\e5a2';
-    background: $color-pink-500;
-    border-color: $color-pink-500;
+    background: $color-blue-500;
+    border-color: $color-blue-500;
     color: white;
   }
 }
 .checkbox__input:checked:hover + .checkbox__icon {
   &:before {
-    background: $color-pink-300;
+    background: $color-blue-300;
   }
 }
 .checkbox__input:checked:active + .checkbox__icon {
   &:before {
-    background: $color-pink-700;
+    background: $color-blue-700;
   }
 }
 
@@ -107,10 +107,10 @@
 @keyframes checkbox-animation {
   000% {
     opacity: 0.4;
-    box-shadow: 0 0 0 0 $color-pink-500;
+    box-shadow: 0 0 0 0 $color-blue-500;
   }
   100% {
     opacity: 0;
-    box-shadow: 0 0 0 16px $color-pink-500;
+    box-shadow: 0 0 0 16px $color-blue-500;
   }
 }
